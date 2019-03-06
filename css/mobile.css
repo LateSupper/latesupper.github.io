@@ -4,6 +4,7 @@
 }
 @media only screen and (max-width: 425px) {
     #top {
+        padding-bottom: 20px;
         position: static;
         box-shadow: none;
     }
@@ -20,6 +21,10 @@
         width: 100%;
         padding: 8px 0;
         text-align: center;
+        border-top: 1px solid #404040;
+    }
+    #navi a:last-child {
+        border-bottom: 1px solid #404040;
     }
     #content {
         width: 100%;

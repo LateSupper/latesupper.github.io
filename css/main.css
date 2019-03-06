@@ -19,10 +19,10 @@ body {
     font-size: 81px;
     color: #5400FF;
     text-decoration: none;
+    transition: color 333ms;
 }
 #logo:hover {
     color: white;
-    transition: color 333ms;
 }
 #navi {
     display: inline-block;
@@ -32,6 +32,7 @@ body {
 #navi a {
     display: block;
     padding: 10px 12px;
+    font-size: 1.1em;
     color: white;
     text-decoration: none;
     transition: box-shadow linear 200ms;
@@ -40,10 +41,17 @@ body {
 #navi a:hover {
     box-shadow: 0 -2px white inset;
 }
+.active {
+    background-color: #0d0d0d;
+    border-radius: 10px 10px 0 0;
+}
 main {
     padding: 15px 0;
     color: white;
     background-color: #404040;
+}
+h2 {
+    margin-top: 0;
 }
 #content {
     width: 80%;
@@ -52,7 +60,9 @@ main {
 }
 #content-one {
     display: table;
-    overflow: hidden;
+}
+#content-one-image {
+    background-color: #373277;
 }
 .content-area {
     width: 100%;
@@ -63,21 +73,12 @@ main {
     width: 50%;
     padding: 10px;
     box-sizing: border-box;
-    position: absolute;
     /* left: 0; */
     float: left;
-    z-index: 2;
-}
-.content-gradient {
-    width: 100%;
-    /* content: ''; */
-    background-image: linear-gradient(to right, rgb(64, 64, 64, 1), rgb(64, 64, 64, 0));
-    background-repeat: no-repeat;
-    z-index: 1;
 }
 .content-image {
     display: table;
-    /* width: 100%; */
+    width: 50%;
     height: auto;
     margin: 0 auto;
     box-sizing: border-box;
@@ -88,7 +89,6 @@ main {
     max-width: 100%;
     height: auto;
 }
-/* background-image: linear-gradient(to right, rgb(64, 64, 64, 1), rgb(64, 64, 64, 0)); */
 footer {
     display: block;
     padding: 25px 0;
