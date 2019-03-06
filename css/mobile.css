@@ -1,0 +1,55 @@
+/* MEDIA QUERIES CSS FOR MOBILE, TABLET, ETC */
+@media only screen and (max-width: 320px) {
+    /* space */
+}
+@media only screen and (max-width: 425px) {
+    #top {
+        position: static;
+        box-shadow: none;
+    }
+    #logo {
+        margin: 25px 0;
+    }
+    #navi {
+        display: block;
+        width: 100%;
+        position: static;
+        box-shadow: 0 0 8px #1a1a1a;
+    }
+    #navi a {
+        width: 100%;
+        padding: 8px 0;
+        text-align: center;
+    }
+    #content {
+        width: 100%;
+        margin: 0;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .content-area {
+        position: static;
+    }
+    .content-box {
+        display: table;
+        width: 80%;
+        margin: 0 auto;
+        position: static;
+        float: none;
+    }
+    .content-image {
+        display: table;
+        width: 80%;
+        margin: 0 auto;
+        position: static;
+        float: none;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    #logo:hover {
+        color: #5400FF;
+    }
+    #navi a:hover {
+        box-shadow: none;
+    }
+}

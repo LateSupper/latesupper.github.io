@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    background-color: #1a1a1a;
+}
+#top {
+    display: block;
+    width: 100%;
+    background-color: #1a1a1a;
+    box-shadow: 0 0 8px #1a1a1a;
+    position: relative;
+    overflow: auto;
+}
+#logo {
+    display: inline-block;
+    margin: 65px 0;
+    padding: 8px 20px;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 81px;
+    color: #5400FF;
+    text-decoration: none;
+}
+#logo:hover {
+    color: white;
+    transition: color 333ms;
+}
+#navi {
+    display: inline-block;
+    position: absolute;
+    bottom: 0; right: 0;
+}
+#navi a {
+    display: block;
+    padding: 10px 12px;
+    color: white;
+    text-decoration: none;
+    transition: box-shadow linear 200ms;
+    float: left;
+}
+#navi a:hover {
+    box-shadow: 0 -2px white inset;
+}
+main {
+    padding: 15px 0;
+    color: white;
+    background-color: #404040;
+}
+#content {
+    width: 80%;
+    margin: 0 auto;
+    overflow: auto;
+}
+#content-one {
+    display: table;
+    overflow: hidden;
+}
+.content-area {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+.content-box {
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    /* left: 0; */
+    float: left;
+    z-index: 2;
+}
+.content-gradient {
+    width: 100%;
+    /* content: ''; */
+    background-image: linear-gradient(to right, rgb(64, 64, 64, 1), rgb(64, 64, 64, 0));
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+.content-image {
+    display: table;
+    /* width: 100%; */
+    height: auto;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: auto;
+}
+.content-image img {
+    /* width: 100%; */
+    max-width: 100%;
+    height: auto;
+}
+/* background-image: linear-gradient(to right, rgb(64, 64, 64, 1), rgb(64, 64, 64, 0)); */
+footer {
+    display: block;
+    padding: 25px 0;
+    color: white;
+    background-color: #1a1a1a;
+    text-align: center;
+}
