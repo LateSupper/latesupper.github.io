@@ -65,11 +65,13 @@ h2 {
     margin: 0 auto;
     overflow: auto;
 }
+/* INDEX CSS */
 #content-one {
     display: table;
 }
 #content-one-image {
-    background-color: #373277;
+    display: block;
+    margin: 0 auto;
 }
 .content-area {
     width: 100%;
@@ -95,6 +97,23 @@ h2 {
     /* width: 100%; */
     max-width: 100%;
     height: auto;
+}
+/* ABOUT CSS */
+#aboutWrap {
+    width: 60%;
+    margin: 0 auto;
+}
+#portfolioWrap {
+    width: 100%;
+    margin: 0 auto;
+}
+#contactInfo {
+    display: table;
+    margin: 0 auto;
+}
+#contactInfo h3 {
+    margin: 0;
+    margin-bottom: 4px;
 }
 footer {
     display: block;

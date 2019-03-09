@@ -36,6 +36,15 @@
         width: 100%;
         margin: 0;
     }
+    #aboutWrap {
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    #portfolioWrap {
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
 }
 @media only screen and (max-width: 767px) {
     .content-area {
