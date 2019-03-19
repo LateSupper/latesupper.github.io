@@ -4,48 +4,83 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>LateSupper Web</title>
+        <link rel="icon" href="images/lsweb-favicon.png">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/mobile.css">
         <link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
-        <script src="js/jQuery/jquery-3.3.1.min.js"></script>
-        <script src="js/jQueryUI/jquery-ui.min.js"></script>
-        <link rel="stylesheet" href="js/jQueryUI/jquery-ui.min.css">
-        <link rel="stylesheet" href="js/jQueryUI/jquery-ui.structure.min.css">
-        <link rel="stylesheet" href="js/jQueryUI/jquery-ui.theme.min.css">
+        <!-- font awesome 5 -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" 
+        crossorigin="anonymous">
     </head>
     <body>
         <header>
             <div id="top">
-                <a id="logo" href="index.html">LSWeb</a>
-                <div id="navi">
-                    <a href="about.html">About</a>
-                    <a href="portfolio.html">Portfolio</a>
-                </div>
+                <div id="logo"></div>
             </div>
         </header>
         <main>
-            <div id="content">
-                <div id="content-one" class="content-area">
-                    <div class="content-box">
-                        <h2>Everything from scratch.</h2>
-                        <p>
-                            All site layouts are created from scratch without using a content management 
-                            system (CMS) or preset frameworks.
-                        </p>
-                        <p>
-                            Creating sites from scratch allows maximum customization of every piece to 
-                            these puzzles.
-                        </p>
+            <div id="about" class="wrap">
+                <h2>About</h2>
+                <p>
+                    Hi my name is Dylan Glidden and I am currently a front-end web development student 
+                    at Metro Community College in Omaha, Nebraska. My favorite part of web 
+                    development by far is the design aspect. HTML5, CSS3, and JavaScript/jQuery are 
+                    the tools I use to create sites. I also have experience with WordPress, but prefer 
+                    working from scratch in a text editor/lightweight coding software such as Visual 
+                    Studio Code.
+                </p>
+                <img src="images/selfimage1.jpg" alt="Portrait" id="portrait">
+                <p>
+                    If you're wondering where the name "LateSupper" comes from, it has been an inside 
+                    joke or nickname that was first started by some friends because of how late I eat 
+                    dinner each night. The name just sort of stuck and I turned it into a username and 
+                    now a partial name for this website. Maybe there will be a slogan of:
+                </p>
+                <p id="slogan">"Web development first, a late supper second."</p>
+                <p>
+                    OK, the slogan could <span class="italic">probably</span> use some work. Check out my 
+                    portfolio below and feel free to email with any questions or even if you would like to 
+                    hire me for a job (personal or business related.)
+                </p>
+            </div>
+            <div id="portfolio" class="wrap">
+                <h2>Portfolio</h2>
+                <div class="portfolio-row">
+                    <div class="portfolio-item" id="traditions">
+                        <a href="portfolio/traditions/index.html" target="_blank"></a>
                     </div>
-                    <div class="content-image">
-                        <img id="content-one-image" src="images/live-code_optim.jpg" alt="Live Code Example">
+                    <!-- <div class="portfolio-item">
+                        item
                     </div>
+                    <div class="portfolio-item">
+                        item
+                    </div> -->
                 </div>
             </div>
         </main>
         <footer>
-            &copy; LateSupper Web <span id="year"></span>
+            <a href="mailto:officiallatesupper@gmail.com" id="email">
+                <i class="fas"></i>
+            </a>
+            <div id="social-links">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/dylan-glidden/">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <!-- GitHub -->
+                <a href="https://github.com/LateSupper">
+                    <i class="fab fa-github"></i>
+                </a>
+                <!-- FaceBook -->
+                <a href="https://www.facebook.com/dglidden4">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <!-- Twitch.TV -->
+                <a href="https://www.twitch.tv/latesupper">
+                    <i class="fab fa-twitch"></i>
+                </a>
+            </div>
         </footer>
     </body>
-    <script src="js/year.js"></script>
 </html>
