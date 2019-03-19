@@ -6,123 +6,187 @@ body {
 header {
     display: block;
     background-color: #1a1a1a;
-    box-shadow: 0 0 8px #1a1a1a;
     overflow: auto;
+    z-index: 1;
 }
 #top {
     display: block;
     width: 80%;
     margin: 0 auto;
-    position: relative;
     overflow: auto;
 }
 #logo {
-    display: inline-block;
+    display: table;
     margin: 65px 0;
-    padding: 8px 0;
+    padding: 8px;
     font-family: 'ZCOOL QingKe HuangYou', cursive;
     font-size: 81px;
     color: #5400FF;
     text-decoration: none;
+    box-sizing: border-box;
     transition: all 333ms;
 }
+#logo::after {
+    content: "LSWeb";
+    animation-name: logo;
+    animation-direction: alternate;
+    animation-delay: 2s;
+    animation-duration: 0.8s;
+    animation-iteration-count: 2;
+}
 #logo:hover {
+    cursor: default;
     color: white;
+    box-shadow: 0 -3px #5400FF inset;
 }
-#navi {
-    display: inline-block;
-    position: absolute;
-    bottom: 0; right: 0;
-}
-#navi a {
-    display: block;
-    padding: 10px 12px;
-    font-size: 1.1em;
-    color: white;
-    text-decoration: none;
-    transition: box-shadow linear 200ms;
-    float: left;
-}
-#navi a:hover {
-    box-shadow: 0 -2px white inset;
-}
-#navi .active {
-    background-color: #5400FF;
-    border-radius: 10px 10px 0 0;
-    box-shadow: 0 -2px white inset;
+/* LOGO ANIMATION */
+@keyframes logo {
+    0%      { content: 'LSWeb'; }
+    11.11%  { content: 'LaSWeb'; }
+    22.22%  { content: 'LatSWeb'; }
+    33.33%  { content: 'LateSWeb'; }
+    44.44%  { content: 'LateSuWeb'; }
+    55.55%  { content: 'LateSupWeb'; }
+    66.66%  { content: 'LateSuppWeb'; }
+    77.77%  { content: 'LateSuppeWeb'; }
+    88.88%  { content: 'LateSupperWeb'; }
+    100%    { content: 'LateSupper Web'; }
 }
 main {
-    padding: 15px 0;
+    padding: 16px 0;
     color: white;
     text-shadow: 1px 1px 2px #1a1a1a;
     background-color: #404040;
-}
-h2 {
-    margin-top: 0;
-}
-p {
-    margin-bottom: 0;
-}
-#content {
-    width: 80%;
-    margin: 0 auto;
     overflow: auto;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
-/* INDEX CSS */
-#content-one {
-    display: table;
-}
-#content-one-image {
-    display: block;
-    margin: 0 auto;
-}
-.content-area {
-    width: 100%;
-    box-sizing: border-box;
-    position: relative;
-}
-.content-box {
-    width: 50%;
-    margin-bottom: 15px;
-    padding-top: 0;
-    box-sizing: border-box;
-    /* left: 0; */
-    float: left;
-}
-.content-image {
-    display: table;
-    width: 50%;
-    height: auto;
-    margin: 0 auto;
-    box-sizing: border-box;
-    overflow: auto;
-}
-.content-image img {
-    /* width: 100%; */
-    max-width: 100%;
-    height: auto;
-}
-/* ABOUT CSS */
-#aboutWrap {
+.wrap {
     width: 60%;
     margin: 0 auto;
+    margin-bottom: 16px;
+    padding: 16px;
+    background-color: #333333;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px #1a1a1a;
 }
-#portfolioWrap {
+.wrap:last-child {
+    margin-bottom: 0;
+}
+.wrap * {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+.wrap *:last-child {
+    margin-bottom: 0;
+}
+.wrap h2 {
+    font-size: 1.90em;
+    border-bottom: 1px solid white;
+}
+.wrap p {
+    font-size: 17px;
+}
+#about, #portfolio {
+    display: block;
+    box-sizing: border-box;
+    overflow: auto;
+}
+/* ABOUT AREA */
+#about p:first-of-type {
+    text-indent: 2em;
+}
+#portrait {
+    display: block;
+    width: 30%;
+    height: auto;
+    margin-left: auto; margin-right: auto;
+}
+#slogan {
     width: 100%;
-    margin: 0 auto;
+    margin: 32px 0;
+    text-align: center;
+    font-style: italic;
 }
-#email {
-    font-weight: bold;
-    color: white;
+.italic {
+    font-style: italic;
+}
+/* PORTFOLIO AREA */
+.portfolio-row {
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    overflow: auto;
+}
+.portfolio-item {
+    width: 32%;
+    height: 200px;
+    margin-right: 2%;
+    margin-bottom: 0;
+    border: 1px solid white;
+    box-sizing: border-box;
+    float: left;
+}
+.portfolio-row .portfolio-item:last-child {
+    margin-right: 0;
+}
+/* portfolio: traditions */
+.portfolio-item#traditions {
+    background-image: url("../images/traditions-splash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.portfolio-item#traditions a {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 footer {
     display: block;
     width: 100%;
-    position: absolute;
-    bottom: 0; left: 0;
-    padding: 25px 0;
-    color: white;
+    padding: 32px 0;
     background-color: #1a1a1a;
     text-align: center;
     box-sizing: border-box;
+}
+#email {
+    display: table;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    font-size: 1.5em;
+    color: white;
+}
+#email:focus {
+    outline: #5400FF;
+}
+#email i:before {
+    content: "\f0e0";
+}
+#email:hover i:before {
+    content: "\f2b6";
+    font-size: 1.2em;
+    transition: font-size 200ms;
+}
+#social-links {
+    display: table;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+#social-links a {
+    display: inline-block;
+    margin-right: 16px;
+    font-size: 1.5em;
+    color: white;
+    transition: font-size 333ms;
+}
+#social-links a:last-child {
+    margin-right: 0;
+}
+#social-links a:hover {
+    transform: rotate(360deg);
+    transition: all ease-out 400ms;
 }

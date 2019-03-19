@@ -1,115 +1,62 @@
-/* MEDIA QUERIES CSS FOR MOBILE, TABLET, ETC */
-@media only screen and (max-width: 320px) {
-    /* space */
-}
-@media only screen and (max-width: 425px) {
+/* MEDIA QUERIES FOR MOBILE, TABLET, ETC. */
+/* SMALL to BIG */
+@media screen and (max-width: 425px) {
     #top {
-        width: 100%;
-        padding-bottom: 20px;
-        position: static;
-        box-shadow: none;
-    }
-    #logo {
-        margin: 25px 0;
-        padding: 8px 20px;
-    }
-    #navi {
-        display: block;
-        width: 100%;
-        position: static;
-        box-shadow: 0 0 8px #1a1a1a;
-    }
-    #navi a {
-        width: 100%;
-        padding: 8px 0;
-        text-align: center;
-        border-top: 1px solid #404040;
-    }
-    #navi a:last-child {
-        border-bottom: 1px solid #404040;
-    }
-    #navi .active {
-        border-radius: 0 0 0 0;
-        box-shadow: none;
-    }
-    #content {
         width: 100%;
         margin: 0;
     }
-    #portfolioWrap {
-        padding: 0 15px;
-        box-sizing: border-box;
+    #logo {
+        margin: 35px 0;
+        margin-left: 16px;
     }
-    footer {
-        position: static;
+    main {
+        padding: 16px;
     }
 }
-@media only screen and (max-width: 768px) {
-    .content-area {
-        position: static;
+@media screen and (max-width: 600px) {
+    .portfolio-row {
+        -webkit-flex-direction: column;
+        flex-direction: column;
     }
-    .content-box {
-        display: table;
-        width: 80%;
-        margin: 0 auto;
-        margin-bottom: 15px;
-        position: static;
+    .portfolio-item {
+        display: block;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 16px;
         float: none;
     }
-    .content-image {
-        display: table;
-        width: 80%;
-        margin: 0 auto;
-        position: static;
-        float: none;
+}
+@media screen and (max-width: 767px) {
+    #logo::after {
+        animation-name: none;
     }
-    #aboutWrap {
-        width: 80%;
-    }
-    #portfolioWrap {
-        width: 80%;
+    #portrait {
+        width: 60%;
     }
 }
-@media only screen and (min-width: 769px) {
-    .content-box {
-        padding-right: 15px;
-    }
-}
-@media only screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
     #logo:hover {
         color: #5400FF;
-    }
-    #navi a:hover {
         box-shadow: none;
     }
-    #navi a.active:hover {
-        box-shadow: 0 -2px white inset;
+}
+@media screen and (min-width: 1601px) {
+    .wrap {
+        width: 50%;
     }
 }
 /* "AFTER RENDERS" */
-@media only screen and (max-width: 425px) {
-    #navi a.active:hover {
-        box-shadow: none;
+/* BIG to SMALL */
+@media screen and (max-width: 1024px) {
+    .wrap {
+        width: 80%;
     }
-    .content-box {
+}
+@media screen and (max-width: 425px) {
+    .wrap {
         width: 100%;
-        margin: 0;
-        margin-bottom: 15px;
-        padding: 0 15px;
     }
-    .content-image {
-        width: 100%;
-        margin: 0;
-        padding: 0 15px;
-    }
-    #aboutWrap {
-        width: 100%;
-        padding: 0 15px;
-        box-sizing: border-box;
-    }
-    #portfolioWrap {
-        width: 100%;
-        padding: 0 15px;
-        box-sizing: border-box;
+    #portrait {
+        width: 90%;
     }
 }
