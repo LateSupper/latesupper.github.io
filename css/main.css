@@ -6,7 +6,6 @@ body {
 }
 header {
     display: block;
-    background-color: #1a1a1a;
     overflow: auto;
     z-index: 1;
 }
@@ -57,7 +56,6 @@ main {
     padding: 16px 0;
     color: white;
     text-shadow: 1px 1px 2px #1a1a1a;
-    background-color: #404040;
     overflow: auto;
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
@@ -72,7 +70,7 @@ main {
     background-color: #333333;
     border-radius: 8px;
     box-sizing: border-box;
-    box-shadow: 0 4px 6px #1a1a1a;
+    box-shadow: 0 4px 6px #0d0d0d;
 }
 .wrap:last-child {
     margin-bottom: 0;
@@ -105,6 +103,8 @@ main {
     width: 30%;
     height: auto;
     margin-left: auto; margin-right: auto;
+    /* border: 1px solid white; */
+    box-shadow: 0 2px 4px #1a1a1a;
 }
 #slogan {
     width: 100%;
@@ -150,7 +150,6 @@ footer {
     display: block;
     width: 100%;
     padding: 32px 0;
-    background-color: #1a1a1a;
     text-align: center;
     box-sizing: border-box;
 }
@@ -169,7 +168,7 @@ footer {
 }
 #email:hover i:before {
     content: "\f2b6";
-    font-size: 1.2em;
+    font-size: 1em;
     transition: font-size 200ms;
 }
 #social-links {
@@ -179,7 +178,7 @@ footer {
 }
 #social-links a {
     display: inline-block;
-    margin-right: 16px;
+    margin-right: 24px;
     font-size: 1.5em;
     color: white;
     transition: font-size 333ms;
