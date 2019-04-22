@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MCC Sage Student Bistro | Home</title>
+        <!-- favicon -->
+        <link rel="icon" href="images/favicon.png">
+        <!-- My CSS -->
+        <link rel="stylesheet" href="css/bistro.css">
+        <link rel="stylesheet" href="css/portfolio.css">
+        <!-- jQuery Mobile CDN -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <!-- jQuery UI -->
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+        <!-- jQuery Mobile Theme CSS -->
+        <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css">
+        <link rel="stylesheet" href="css/themes/student-bistro.min.css">
+        <!-- scroll function -->
+        <!-- <script src="js/scrollFunc.js"></script> -->
+        <style>
+            .ui-dialog {
+                padding: 0;
+                z-index: 2000;
+            }
+            .ui-widget-header {
+                border: none;
+            }
+            .ui-dialog-content, .ui-widget-content {
+                background-color: white;
+            }
+        </style>
+    </head>
+    <body>
+    <!-- 
+        Dylan Glidden
+        ac1/home.html
+        Olberding
+        INFO2439.WW
+        4/12/2019
+     -->
+        <script src="js/mobileDisc.js"></script>
+        <div id="mobileDisc" title="Recommended">
+            <p>
+                This web app is best viewed on a mobile device.
+            </p>
+        </div>
+        <div data-role="page" data-title="MCC Sage Student Bistro | Home" data-theme="a">
+            <div id="head-area" data-role="header" data-position="fixed" data-tap-toggle="false" style="border-style: none;">
+                <img id="ssbLogo" src="images/sage-student-bistro.png" width="400" height="177" alt="Sage Student Bistro">
+            </div>
+            <div class="ui-content">
+                <div id="navi" data-role="navbar">
+                    <ul>
+                        <li><a href="home.html" data-icon="home" data-ajax="false">Home</a></li>
+                        <li><a href="map.html" data-icon="location" data-ajax="false">Info</a></li>
+                        <li><a href="survey.html" data-icon="comment" data-ajax="false">Survey</a></li>
+                        <li><a href="menu.html" data-icon="bars" data-ajax="false">Menu</a></li>
+                    </ul>
+                </div>
+                <h1>Student Prepared Lunch &amp; Dinner</h1>
+                <p>
+                    The Sage Student Bistro operates as a customer-focused classroom providing our students an opportunity 
+                    to refine their culinary, bakery, service and supervisory skills in a setting where the element of time 
+                    is as important as the food and service. Because this is a class, the Bistro is open when the students 
+                    are in session. A standard menu is offered, as well as weekly, student designed prix fixe specials during 
+                    dinner. Find us on 
+                    <a id="fbLink" href="https://www.facebook.com/pg/sagestudentbistro/community/?mt_nav=0&msite_tab_async=0" data-rel="external" target="_blank">Facebook</a> 
+                    for media and additional info.
+                </p>
+                <h2>RESERVATIONS</h2>
+                <p>
+                    Reservations are highly-recommended for dinner, Monday through Thursday, with available seating times from 
+                    6-8 p.m. Call us at 531-MCC-2328 to make reservations, or click the button at the bottom to make reservations through 
+                    OpenTable.com. We also request that you contact Vernetta Kosalka at 531-MCC-2321 to make lunch reservations for parties of 
+                    six or more. Lunch reservations are not required or accepted for parties smaller than six.
+                </p>
+                <h2>PARKING</h2>
+                <p>
+                    During lunch service, guests may park in college lots as available. 
+                    Reserved parking for bistro guests is available in the lot to the north of building 22.
+                </p>
+            </div>
+            <div id="foot" data-role="footer" data-position="fixed" data-tap-toggle="false" style="border-style: none;">
+                <a href="https://www.opentable.com/sage-student-bistro-institute-for-the-culinary-arts-reservations-omaha/?rid=52120&restref=52120&corrid=0d1a380a-3205-4509-9f59-fc9a4555d72c"
+                    class="ui-btn" target="_blank">
+                    Make a Reservation
+                </a>
+            </div>
+        </div>
+        <!-- bottom script(s) -->
+    </body>
+</html>
