@@ -8,12 +8,13 @@ body {
     display: block;
     width: 100%;
     margin: 0 auto;
-    margin-bottom: 100px;
     padding: 8px 0;
     background-color: #1a1a1a;
     box-shadow: 0 0 4px #0d0d0d;
     overflow: auto;
     transition: margin .33s;
+    position: fixed;
+    top: 0;
     z-index: 10;
 }
 #logo {
@@ -53,8 +54,9 @@ body {
     88.88%  { content: 'LateSupperWeb'; }
     100%    { content: 'LateSupper Web'; }
 }
-main {
+#main {
     padding: 16px 0;
+    padding-top: 166px;
     color: white;
     text-shadow: 1px 1px #0d0d0d;
     overflow: auto;
@@ -96,14 +98,13 @@ main {
     overflow: auto;
     z-index: 2;
 }
-/* ABOUT AREA */
-/* #about p:first-of-type {
-    text-indent: 2em;
-} */
-.firstLetter {
-    font-size: 1.25em;
-    font-weight: bold;
+#portfolio {
+    margin: 0 auto;
+    margin-bottom: 0;
+    padding: 16px;
+    box-sizing: border-box;
 }
+/* ABOUT AREA */
 #portrait {
     display: block;
     width: 30%;
@@ -125,17 +126,22 @@ main {
 .portfolio-row {
     display: -webkit-flex;
     display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
     width: 100%;
     overflow: auto;
 }
 .portfolio-item {
-    width: 32%;
+    display: flex;
+    width: 49%;
     height: 200px;
-    margin-right: 2%;
     margin-bottom: 0;
     border: 1px solid white;
     box-sizing: border-box;
     float: left;
+}
+.portfolio-item::before, .portfolio-item::after {
+    content: "";
 }
 .portfolio-row .portfolio-item:last-child {
     margin-right: 0;
@@ -147,7 +153,13 @@ main {
     background-size: cover;
     background-position: center;
 }
-.portfolio-item#traditions a {
+.portfolio-item#sage-bistro-app {
+    background-image: url("../images/sage-bistro-app-splash.PNG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.portfolio-item#traditions a, .portfolio-item#sage-bistro-app a {
     display: block;
     width: 100%;
     height: 100%;

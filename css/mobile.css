@@ -13,21 +13,9 @@
         margin-left: 16px;
         padding: 4px 0;
     }
-    main {
+    #main {
         padding: 16px;
-    }
-}
-@media screen and (max-width: 600px) {
-    .portfolio-row {
-        -webkit-flex-direction: column;
-        flex-direction: column;
-    }
-    .portfolio-item {
-        display: block;
-        width: 100%;
-        margin: 0;
-        margin-bottom: 16px;
-        float: none;
+        padding-top: 76px;
     }
 }
 @media screen and (max-width: 767px) {
@@ -54,6 +42,24 @@
 @media screen and (max-width: 1024px) {
     .wrap {
         width: 80%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .portfolio-item {
+        width: 49%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .portfolio-row {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+    .portfolio-item {
+        display: block;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 16px;
+        float: none;
     }
 }
 @media screen and (max-width: 425px) {
