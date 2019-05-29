@@ -6,69 +6,89 @@
         <title>LateSupper Web</title>
         <link rel="icon" href="images/favicon.png">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/mobile.css">
-        <link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
+        <link rel="stylesheet" href="css/responsive.css">
+        <!-- Google Font(s) -->
+        <link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet"><!-- "ZCOOL QingKe HuangYou" -->
         <!-- font awesome 5 -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" 
         crossorigin="anonymous">
     </head>
     <body>
+    <div id="page">
+        <!-- Top of Page -->
         <div id="top">
-            <div id="logo"></div>
+            <span id="logo"></span>
         </div>
-        <div id="main">
-            <div id="about" class="wrap">
-                <h2>About</h2>
+        <!-- End of Top -->
+
+        <!-- Content of Page -->
+        <div id="content">
+            <!-- "About" Area -->
+            <div class="content-area" id="about">
+                <span class="content-title">About</span>
+                <!-- Intro Part -->
+                <div id="intro">
+                    <img id="portrait" src="images/selfimage1.jpg" width="250" height="250" alt="Image of myself">
+                    <p>
+                        My name is Dylan. As of May 2019, I am a graduate from Metropolitan Community College in 
+                        Omaha, Nebraska. Through MCC I obtained an Associate's degree in Information Technology with a 
+                        focus on front end web development. This website is where I will host my portfolio and other 
+                        information about myself.
+                    </p>
+                </div>
+                <!-- End of Intro -->
+                <!-- Skills List -->
+                <h2>Skills</h2>
+                <ul id="skills">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>jQuery</li>
+                    <li>WordPress</li>
+                </ul>
+                <!-- End of Skills List -->
                 <p>
-                    Hi my name is Dylan and I am currently a front end web development student at 
-                    Metro Community College. My favorite part of web development by far is the design 
-                    aspect. HTML5, CSS3, and JavaScript/jQuery are the tools I use to create sites. 
-                    I also have experience with WordPress, but prefer working from scratch in a text 
-                    editor/lightweight coding software like Visual Studio Code.
-                </p>
-                <img src="images/selfimage1.jpg" alt="Portrait" id="portrait">
-                <p>
-                    If you're wondering where the name "LateSupper" comes from, it has been an inside 
-                    joke or nickname that was first started by some friends because of how late I eat 
-                    dinner each night. The name just sort of stuck and I turned it into a username and 
-                    now a partial name for this website.
-                </p>
-                <p>
-                    Check out my portfolio below and feel free to email with any questions or even if 
-                    you would like to hire me for a job.
+                    I am currently looking for opportunities within the IT field for either a full-time position, or even an 
+                    internship. I also offer some freelance website creation to anyone who is looking to have a personal 
+                    website. Click or tap the envelope icon below, or <a href="mailto:officiallatesupper@gmail.com">here</a> 
+                    to reach out with any questions.
                 </p>
             </div>
-            <div class="wrap" style="padding: 0; background-color: #1a1a1a; box-shadow: none;">
-                <h2>Portfolio</h2>
-                <div class="portfolio-row">
-                    <div class="portfolio-item" id="traditions">
-                        <a href="portfolio/traditions/index.html" target="_blank"></a>
-                    </div>
-                    <div class="portfolio-item" id="sage-bistro-app">
-                        <a href="portfolio/sage-bistro-app/home.html" target="_blank"></a>
-                    </div>
+            <!-- End of About -->
+
+            <!-- "Portfolio" Area -->
+            <div class="content-area" id="portfolio">
+                <span class="content-title">Portfolio</span>
+                <div class="row">
+                    <a href="portfolio/traditions/index.html" class="row-item" id="traditions-static" rel="noopener noreferrer" target="_blank"></a>
+                    <a href="portfolio/sage-bistro-app/home.html" class="row-item" id="sage-bistro-app" rel="noopener noreferrer" target="_blank"></a>
+                    <!-- <a href="#" class="row-item">Test Item</a>
+                    <a href="#" class="row-item">Test Item</a>
+                    <a href="#" class="row-item">Test Item</a> -->
                 </div>
             </div>
+            <!-- End of Portfolio -->
         </div>
-        <footer>
-            <a href="mailto:officiallatesupper@gmail.com" id="email">
-                <i class="fas"></i>
-            </a>
-            <div id="social-links">
-                <!-- LinkedIn -->
-                <a href="https://www.linkedin.com/in/dylan-glidden/" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <!-- GitHub -->
-                <a href="https://github.com/LateSupper" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-                <!-- FaceBook -->
-                <a href="https://www.facebook.com/dglidden4" target="_blank">
-                    <i class="fab fa-facebook-square"></i>
+        <!-- End of Content -->
+
+        <!-- Foot of Page -->
+        <div id="foot">
+            <div id="email">
+                <a href="mailto:officiallatesupper@gmail.com">
+                    <i class="fas fa-envelope"></i>
                 </a>
             </div>
-        </footer>
+            <div id="social">
+                <a href="https://www.linkedin.com/in/dylan-glidden/" rel="noopener noreferrer" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a><!-- LinkedIn -->
+                <a href="https://www.twitch.tv/latesupper" rel="noopener noreferrer" target="_blank">
+                    <i class="fab fa-twitch"></i>
+                </a>
+            </div>
+        </div>
+        <!-- End of Foot -->
+    </div>
     </body>
 </html>
