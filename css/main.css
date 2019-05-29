@@ -1,210 +1,181 @@
+/* Main CSS */
 body {
-    margin: 0;
-    /* font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; */
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #1a1a1a;
-}
-#top {
-    display: block;
-    width: 100%;
     margin: 0 auto;
-    padding: 8px 0;
-    background-color: #1a1a1a;
-    box-shadow: 0 0 4px #0d0d0d;
-    overflow: auto;
-    transition: margin .33s;
-    position: fixed;
-    top: 0;
-    z-index: 10;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 1rem;
+    color: #e6e6e6;
+    background-color: #262626;
 }
-#logo {
-    display: table;
-    margin-left: 50px;
-    padding: 4px 0;
-    font-family: 'ZCOOL QingKe HuangYou', cursive;
-    font-size: 36px;
-    color: #5400FF;
-    text-decoration: none;
-    box-sizing: border-box;
-    transition: margin .33s, color .33s, box-shadow .33s;
+#page {
+    position: relative;
 }
-#logo::after {
-    content: "LSWeb";
-    animation-name: logo;
-    animation-direction: alternate;
-    animation-delay: 2s;
-    animation-duration: 0.8s;
-    animation-iteration-count: 2;
-}
-#logo:hover {
-    cursor: default;
-    color: white;
-    box-shadow: 0 -2px #5400FF inset;
-}
-/* LOGO ANIMATION */
-@keyframes logo {
-    0%      { content: 'LSWeb'; }
-    11.11%  { content: 'LaSWeb'; }
-    22.22%  { content: 'LatSWeb'; }
-    33.33%  { content: 'LateSWeb'; }
-    44.44%  { content: 'LateSuWeb'; }
-    55.55%  { content: 'LateSupWeb'; }
-    66.66%  { content: 'LateSuppWeb'; }
-    77.77%  { content: 'LateSuppeWeb'; }
-    88.88%  { content: 'LateSupperWeb'; }
-    100%    { content: 'LateSupper Web'; }
-}
-#main {
-    padding: 16px 0;
-    padding-top: 166px;
-    color: white;
-    text-shadow: 1px 1px #0d0d0d;
-    overflow: auto;
-    -webkit-user-select: none; /* Safari */        
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+/Edge */
-    user-select: none; /* Standard */
-}
-.wrap {
-    width: 60%;
-    margin: 0 auto;
-    margin-bottom: 16px;
-    padding: 16px;
-    background-color: #333333;
-    border-radius: 4px;
-    box-sizing: border-box;
-    box-shadow: 0 4px 6px #0d0d0d;
-}
-.wrap:last-child {
-    margin-bottom: 0;
-}
-.wrap * {
-    margin-top: 0;
-    margin-bottom: 16px;
-}
-.wrap *:last-child {
-    margin-bottom: 0;
-}
-.wrap h2 {
-    font-size: 2em;
-    border-bottom: 1px solid white;
-}
-.wrap p {
-    font-size: 17px;
-}
-#about, #portfolio {
-    display: block;
-    box-sizing: border-box;
-    overflow: auto;
-    z-index: 2;
-}
-#portfolio {
-    margin: 0 auto;
-    margin-bottom: 0;
-    padding: 16px;
-    box-sizing: border-box;
-}
-/* ABOUT AREA */
-#portrait {
-    display: block;
-    width: 30%;
-    height: auto;
-    margin-left: auto; margin-right: auto;
-    border-radius: 50%;
-    box-shadow: 0 2px 4px #1a1a1a;
-}
-#slogan {
-    width: 100%;
-    margin: 32px 0;
-    text-align: center;
-    font-style: italic;
-}
-.italic {
-    font-style: italic;
-}
-/* PORTFOLIO AREA */
-.portfolio-row {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
-    width: 100%;
-    overflow: auto;
-}
-.portfolio-item {
-    display: flex;
-    width: 49%;
-    height: 200px;
-    margin-bottom: 0;
-    border: 1px solid white;
-    box-sizing: border-box;
-    float: left;
-}
-.portfolio-item::before, .portfolio-item::after {
-    content: "";
-}
-.portfolio-row .portfolio-item:last-child {
-    margin-right: 0;
-}
-/* portfolio: traditions */
-.portfolio-item#traditions {
-    background-image: url("../images/traditions-splash.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.portfolio-item#sage-bistro-app {
-    background-image: url("../images/sage-bistro-app-splash.PNG");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.portfolio-item#traditions a, .portfolio-item#sage-bistro-app a {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-footer {
-    display: block;
-    width: 100%;
-    padding: 32px 0;
-    text-align: center;
-    box-sizing: border-box;
-}
-#email {
-    display: table;
-    margin: 0 auto;
-    margin-bottom: 16px;
-    font-size: 1.5em;
-    color: white;
-}
-#email:focus {
-    outline: #5400FF;
-}
-#email i:before {
-    content: "\f0e0";
-}
-#email:hover i:before {
-    content: "\f2b6";
-    font-size: 1em;
-    transition: font-size 200ms;
-}
-#social-links {
-    display: table;
-    margin: 0 auto;
-    box-sizing: border-box;
-}
-#social-links a {
-    display: inline-block;
-    margin-right: 24px;
-    font-size: 1.5em;
-    color: white;
-    transition: font-size 333ms;
-}
-#social-links a:last-child {
-    margin-right: 0;
-}
-#social-links a:hover {
-    transform: rotate(360deg);
-    transition: all ease-out 400ms;
-}
+/* top, content, foot | display/width/box-sizing */
+    #top, #content, #foot {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: auto;
+    }
+/* top Styles */
+    #top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 16px 0;
+        background-color: #1a1a1a;
+        box-shadow: 0 0 4px #0d0d0d;
+        z-index: 10;
+    }
+    /* logo Animation */
+    @keyframes logo {
+        0%      { content: 'LSWeb'; }
+        11.11%  { content: 'LaSWeb'; }
+        22.22%  { content: 'LatSWeb'; }
+        33.33%  { content: 'LateSWeb'; }
+        44.44%  { content: 'LateSuWeb'; }
+        55.55%  { content: 'LateSupWeb'; }
+        66.66%  { content: 'LateSuppWeb'; }
+        77.77%  { content: 'LateSuppeWeb'; }
+        88.88%  { content: 'LateSupperWeb'; }
+        100%    { content: 'LateSupper Web'; }
+    }
+    /* Logo Text Styles */
+    #logo {
+        display: block;
+        font-family: 'ZCOOL QingKe HuangYou', cursive; /* Google Font */
+        font-size: 2rem;
+        color: #5400FF;
+        text-align: center;
+    }
+    #logo::after {
+        content: "LSWeb";
+        animation-name: logo;
+        animation-delay: 2s;
+        animation-duration: 0.6s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+/* content Styles */
+    #content {
+        width: 100%;
+        margin: 80px auto 106px;
+        padding: 0 16px;
+        text-shadow: 1px 1px 2px #0d0d0d;
+    }
+    .content-area {
+        /* no user select */
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+/Edge */
+        user-select: none; /* Standard */
+    }
+    .content-title {
+        display: block;
+        font-size: 2.25rem;
+        border-bottom: 1px solid #e6e6e6;
+    }
+    #content .content-area {
+        margin-bottom: 8px;
+    }
+    #content .content-area:last-child {
+        margin-bottom: 0;
+    }
+    #content a {
+        color: #e6e6e6;
+    }
+    #content a:active {
+        color: #a6a6a6;
+    }
+    /* About Specific */
+        #intro {
+            display: table;
+        }
+        #portrait {
+            display: none;
+            box-shadow: 0 2px 5px #1a1a1a;
+        }
+        #about h2 {
+            margin-top: 0;
+            font-weight: normal;
+            text-align: center;
+        }
+        #about #skills {
+            text-shadow: none;
+            font-size: 1.5rem;
+            font-family: 'ZCOOL QingKe HuangYou', cursive; /* Google Font */
+        }
+        #about ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            box-shadow: 0 0 4px #0d0d0d;
+        }
+        #about ul li {
+            padding: 8px 0;
+            font-weight: bold;
+            color: #5400FF;
+            text-align: center;
+            background-color: #e6e6e6;
+            border-bottom: 1px solid #262626;
+            border-radius: 4px;
+            box-shadow: 0 -2px 2px #a6a6a6 inset;
+        }
+        #about ul li:last-child {
+            border-right: none;
+        }
+    /* End of About */
+    /* Portfolio Specific */
+        .row {
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+        }
+        .row-item {
+            display: block;
+            width: 100%;
+            height: 200px;
+            margin: 16px auto;
+            margin-bottom: 0;
+            border: 1px solid #e6e6e6;
+        }
+        #traditions-static {
+            background-image: url("../images/traditions-splash.png");
+        }
+        #sage-bistro-app {
+            background-image: url("../images/sage-bistro-app-splash.PNG");
+        }
+        #dgphoto {
+            background-image: url("../images/dgphoto-splash.PNG");
+        }
+        #traditions-static, #sage-bistro-app, #dgphoto {
+            background-size: cover;
+            background-position: center;
+        }
+    /* End of Portfolio */
+/* foot Styles */
+    #foot {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        padding-top: 4px;
+        padding-bottom: 8px;
+        background-color: #1a1a1a;
+        box-shadow: 0 0 4px #0d0d0d;
+        z-index: 10;
+    }
+    #email, #social {
+        display: table;
+        margin: 0 auto;
+    }
+    #email a, #social a {
+        font-size: 1.75em;
+        color: #e6e6e6;
+        text-decoration: none;
+    }
+    #social a {
+        margin-right: 8px;
+    }
+    #social a:last-child {
+        margin-right: 0;
+    }
