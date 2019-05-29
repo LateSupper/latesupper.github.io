@@ -27,6 +27,42 @@ body {
         z-index: 10;
     }
     /* logo Animation */
+    @-webkit-keyframes logo {
+        0%      { content: 'LSWeb'; }
+        11.11%  { content: 'LaSWeb'; }
+        22.22%  { content: 'LatSWeb'; }
+        33.33%  { content: 'LateSWeb'; }
+        44.44%  { content: 'LateSuWeb'; }
+        55.55%  { content: 'LateSupWeb'; }
+        66.66%  { content: 'LateSuppWeb'; }
+        77.77%  { content: 'LateSuppeWeb'; }
+        88.88%  { content: 'LateSupperWeb'; }
+        100%    { content: 'LateSupper Web'; }
+    }
+    @-moz-keyframes logo {
+        0%      { content: 'LSWeb'; }
+        11.11%  { content: 'LaSWeb'; }
+        22.22%  { content: 'LatSWeb'; }
+        33.33%  { content: 'LateSWeb'; }
+        44.44%  { content: 'LateSuWeb'; }
+        55.55%  { content: 'LateSupWeb'; }
+        66.66%  { content: 'LateSuppWeb'; }
+        77.77%  { content: 'LateSuppeWeb'; }
+        88.88%  { content: 'LateSupperWeb'; }
+        100%    { content: 'LateSupper Web'; }
+    }
+    @-o-keyframes logo {
+        0%      { content: 'LSWeb'; }
+        11.11%  { content: 'LaSWeb'; }
+        22.22%  { content: 'LatSWeb'; }
+        33.33%  { content: 'LateSWeb'; }
+        44.44%  { content: 'LateSuWeb'; }
+        55.55%  { content: 'LateSupWeb'; }
+        66.66%  { content: 'LateSuppWeb'; }
+        77.77%  { content: 'LateSuppeWeb'; }
+        88.88%  { content: 'LateSupperWeb'; }
+        100%    { content: 'LateSupper Web'; }
+    }
     @keyframes logo {
         0%      { content: 'LSWeb'; }
         11.11%  { content: 'LaSWeb'; }
