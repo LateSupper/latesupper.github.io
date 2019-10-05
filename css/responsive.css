@@ -27,6 +27,9 @@
                 border-radius: 50%;
                 float: left;
             }
+            #intro {
+                padding: 60px 0;
+            }
             #intro p {
                 display: table-cell;
                 padding-left: 5%;
@@ -43,6 +46,12 @@
                 flex: 1 0 29%;
                 margin: 8px;
             }
+            #contin {
+                margin: 60px 0;
+            }
+            #email {
+                margin-bottom: 4px;
+            }
             #email a, #social a {
                 display: inline-block;
                 transition: transform 200ms;
@@ -50,7 +59,10 @@
             #social a {
                 margin-right: 16px;
             }
-            #email a:hover, #social a:hover {
+            #email a:hover i::before {
+                content: '\f2b6';
+            }
+            #social a:hover {
                 -webkit-transform: scale(1.25);
                 -moz-transform: scale(1.25);
                 -o-transform: scale(1.25);
@@ -89,6 +101,9 @@
         }
     /* <= 768px Width (iPad/Tablets) */
         @media only screen and (max-width: 768px) {
+            body {
+                font-size: 1.1rem;
+            }
             #content {
                 width: 90%;
                 margin-left: auto;

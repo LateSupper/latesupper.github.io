@@ -180,6 +180,17 @@ body {
         #about ul li:last-child {
             border-right: none;
         }
+        #contin {
+            padding: 40px 16px;
+            color: #0d0d0d;
+            background-color: #e6e6e6;
+            border-radius: 4px;
+            text-shadow: 1px 1px 2px #a6a6a6;
+            box-shadow: 0 0 4px #0d0d0d, 0 -2px 2px #a6a6a6 inset;
+        }
+        #contin a {
+            color: #0d0d0d;
+        }
     /* End of About */
     /* Portfolio Specific */
         .row {
