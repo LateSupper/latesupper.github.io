@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+        <title>dylang.info</title>
+        <link id="favi" rel="icon" href="imgs/favicon-L.png" />
+        <link rel="stylesheet" href="fa/all.css" />
+        <link rel="stylesheet" href="dg.css" />
+        <script src="jquery-3.4.1.min.js"></script>
+        <script src="dg.js"></script>
+        <style>
+            body { margin: 0; font-family: 'Open Sans', serif; background-color: #e5e5e5; }
+            body.dm { color: #f2f2f2; background-color: #1a1a1a; }
+            body * { text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5); box-sizing: border-box; }
+
+            #page { position: relative; min-width: 320px; padding-top: 63px; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+
+            .a-sec { background-color: #e5e5e5; }
+            .a-sec.dm { background-color: #262626; }
+            .b-sec { background-color: #cccccc; }
+            .b-sec.dm { background-color: #404040; }
+            .a-sec, .b-sec { padding: 96px 16px; font-size: 22px; }
+
+            #head { position: fixed; top: 0; left: 0; width: 100%; padding: 16px; font-family: Arial, Helvetica, sans-serif; background-color: #f2f2f2; box-shadow: 0 0 4px rgba(0, 0, 0, 0.5); transition: padding 0.25s; z-index: 10; }
+            #head.dm { background-color: #1a1a1a; }
+            #headtext { padding-right: 32px; font-size: 15pt; font-weight: 400; color: #808080; float: left; }
+            #headtext span { font-size: 19.5pt; color: #6600ff; }
+            #head nav { height: 100%; float: right; }
+            #head nav a { display: inline-block; height: 100%; margin: 5px 0; font-size: 13.5pt; color: #6600ff; text-decoration: none; }
+            #head nav a:not(:last-of-type) { margin-right: 10px }
+            #mnav { width: 220px; }
+            #mnav a { display: block; width: 100%; padding: 12px 0; border-top: 1px solid #1a1a1a; }
+            #dm { position: absolute; right: 0; bottom: 0; padding: 4px 8px; background-color: #f2f2f2; border-radius: 0 0 3px 3px; box-shadow: 0 2px 2px rgba(0, 0, 0, 0.33); transform: translate(-16px, calc(100%)); z-index: 11; }
+            #dm.dm { background-color: #1a1a1a; }
+            #dm i { font-size: 20px; color: rgba(0, 0, 0, 0.20); }
+            #dm.dm i { color: rgba(255, 255, 255, 0.80); }
+            #dms { position: relative; width: 36px; height: 20px; margin: 0 8px; background-color: #808080; border-radius: 20px; }
+            #dms.dm { background-color: #808080; }
+            #dms:hover { cursor: pointer; }
+            #dms-k { position: absolute; top: 2px; left: 2px; display: inline-block; width: 16px; height: 16px; background-color: rgba(0, 0, 0, 0.5); border-radius: 50%; transition: background-color 0.25s, left 0.25s; }
+            #dms-k.dm { left: 18px; background-color: rgba(255, 255, 255, 0.80); }
+
+            #intro { display: flex; flex-direction: row; flex-wrap: nowrap; }
+            #intro img { display: block; width: 250px; height: 250px; margin: 0 auto; margin-right: 32px; background-color: rgba(0, 0, 0, 0.10); border-radius: 50%; box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.66); transform: rotate(-10deg); filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.66)); }
+            #intro.dm img { background-color: rgba(255, 255, 255, 0.15); }
+
+            #sl { display: flex; flex-direction: row; flex-wrap: wrap; }
+            .skili { display: inline-block; flex: 100%; margin: 6px; padding: 16px 5px; font-family: Arial, Helvetica, sans-serif; font-size: 24px; font-weight: bold; color: #6600ff; text-align: center; background-color: #ffffff; border-radius: 6px; box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.33) inset; }
+            #osl { display: table; margin: 8px auto; padding: 0; list-style-type: none; }
+            #osl li::before { content: '\2022'; width: 1em; margin-left: 0.5em; margin-right: 0.5em; font-size: 22pt; font-weight: bold; color: #6600ff; text-shadow: none; }
+            #osl.dm li::before { color: #f2f2f2; }
+
+            #portfolio { display: flex; flex-direction: row; flex-wrap: wrap; }
+            .porti { display: inline-block; justify-content: center; width: 300px; height: 200px; text-align: center; box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.66); }
+            
+            #foot { padding: 125px 0; font-family: Arial, Helvetica, sans-serif; text-align: center; background-color: #f2f2f2; }
+            #foot.dm { background-color: #1a1a1a; }
+
+            @media screen and (max-width: 600px) {
+                #intro { flex-direction: column; }
+                #intro img { margin-right: auto; margin-bottom: 32px; }
+                .a-sec, .b-sec { padding-left: 10px; padding-right: 10px; }
+            }
+            @media screen and (min-width: 768px) {
+                .skili { flex: 48%; padding: 64px 5px; }
+                /* .porti { flex: 48%; } */
+            }
+            @media screen and (min-width: 1024px) {
+                #page { padding-top: 114px; }
+                .a-sec, .b-sec { padding: 150px 16%; }
+                #head { padding: 32px 16px; }
+                #headtext, #headtext span { font-size: 1.66em; }
+                #head nav a { margin: 11px 0; font-size: 1.5em; }
+            }
+            @media screen and (min-width: 1280px) {
+                .skili { flex: 23%; }
+                /* .porti { flex: 23%; } */
+            }
+        </style>
+    </head>
+    <body>
+        <div id="page">
+            <a id="bk2t"></a>
+            <div id="head">
+                <span id="headtext"><span>DylanG.</span></span>
+                <nav>
+                    <a href="javascript:void(0);" id="abt">About</a>
+                    <a href="javascript:void(0);" id="skl">Skills</a>
+                    <a href="javascript:void(0);" id="prt">Portfolio</a>
+                </nav>
+                <div id="mnav" style="display: none;">
+                    <a href="javascript:void(0);" id="abt">About</a>
+                    <a href="javascript:void(0);" id="skl">Skills</a>
+                    <a href="javascript:void(0);" id="prt">Portfolio</a>
+                </div>
+                <div id="dm">
+                    <div style="display: table;">
+                        <span style="display: table-cell; vertical-align: middle;"><i class="fas fa-sun"></i></span>
+                        <span style="display: table-cell; vertical-align: middle;">
+                            <div id="dms">
+                                <div id="dms-k"></div>
+                            </div>
+                        </span>
+                        <span style="display: table-cell; vertical-align: middle;"><i class="fas fa-moon"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div id="intro" class="a-sec">
+                <div>
+                    <span style="display: table; width: 100%; height: 100%;">
+                        <span style="display: table-cell; width: 100%; height: 100%; vertical-align: middle;">
+                            <img src="imgs/si_cutout.png" alt="portrait">
+                        </span>
+                    </span>
+                </div>
+                <div>
+                    <span style="display: table; height: 100%;">
+                        <span style="display: table-cell; height: 100%; text-align: center; vertical-align: middle;">
+                            Hey, I'm Dylan. In May of 2019 I graduated from Metropolitan Community College obtaining an Associate's degree in Information Technology. 
+                            The focus of the degree was front end web development. Ever since graduating I've been gaining as much experience in the IT field as I can,
+                            and sharpening my skills as a developer.
+                        </span>
+                    </span>
+                </div>
+            </div>
+            <div id="skills" class="b-sec">
+                <div id="sl">
+                    <div class="skili">HTML</div>
+                    <div class="skili">CSS</div>
+                    <div class="skili">JavaScript</div>
+                    <div class="skili">WordPress</div>
+                </div>
+                <div style="display: table; margin: 25px auto 6px;">
+                    Other skills/programming languages:<br>
+                    <ul id="osl">
+                        <li>jQuery</li>
+                        <li>Visual Basic</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="portfolio" class="a-sec">
+                <div style="height: 212px; margin: 0 auto; padding: 6px;">
+                    <a href="pf/traditions/index.html" class="porti" style="background-image: url(pf/traditions-splash.jpg); background-position: center; background-size: auto 100%; background-repeat: no-repeat;"></a>
+                </div>
+                <!-- <div style="height: 212px; margin: 0 auto; padding: 6px;">
+                    <a href="pf/traditions/index.html" class="porti" style="background-image: url(pf/traditions-splash.jpg); background-position: center; background-size: auto 100%; background-repeat: no-repeat;"></a>
+                </div> -->
+            </div>
+            <div id="foot">
+                Copyright &copy; <span id="year"></span>, dylang.info<br><br>All rights reserved.
+            </div>
+        </div>
+    </body>
+</html>
