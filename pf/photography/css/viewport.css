@@ -1,0 +1,71 @@
+/* mobile CSS queries */
+/* MIN WIDTHS */
+    @media screen and (min-width: 768px) {
+        #portrait {
+            width: 50%;
+        }
+    }
+    @media screen and (min-width: 1280px) {
+        #headSpace {
+            padding: 8em 0;
+        }
+        #headSpace #name {
+            font-size: 48px;
+        }
+        #headSpace #occu {
+            font-size: 42px;
+        }
+        .wrap {
+            width: 60%;
+        }
+    }
+    @media screen and (min-width: 1600px) {
+        #portrait {
+            width: 25%;
+        }
+    }
+/* MAX WIDTHS */
+    @media screen and (max-width: 1024px) {
+        #navi button:hover {
+            box-shadow: none;
+        }
+    }
+    @media screen and (max-width: 900px) {
+        .column {
+            flex: 50%;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        hr {
+            width: 50%;
+        }
+        #headSpace {
+            padding: 3em 0;
+        }
+        .column {
+            max-width: 50%;
+        }
+    }
+    @media screen and (max-width: 550px) {
+        .mobileBR {
+            display: block;
+        }
+        #spacerDot {
+            display: none;
+        }
+    }
+    @media screen and (max-width: 440px) {
+        #headSpace {
+            padding: 1.5em 0;
+        }
+    }
+    @media screen and (max-width: 425px) {
+        .column {
+            max-width: 100%;
+        }
+    }
+    @media screen and (max-width: 415px) {
+        .wrap {
+            width: 95%;
+        }
+    }

@@ -1,0 +1,233 @@
+/* primary CSS */
+
+/* #d39f4c */
+
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    color: #0d0d0d;
+    background-color: #ffffff;
+    user-select: none;
+}
+/* Button for onScroll/toTop function */
+#toTopBtn {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    margin: 50px 25px;
+    font-size: 2.25em;
+    color: #ffffff;
+    background-color: #a6a6a6;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 1px 2px #0d0d0d;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 200ms, opacity 200ms;
+    z-index: 10;
+}
+#toTopBtn:focus {
+    outline: 0;
+}
+#toTopBtn:hover {
+    cursor: pointer;
+}
+#content {
+    position: relative;
+    display: block;
+    height: 100%;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+#content * {
+    box-sizing: border-box;
+}
+.wrap {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+hr {
+    width: 300px;
+    margin: 24px auto;
+    border-top: 1px solid #ffffff;
+    border-bottom: none;
+}
+.mobileBR {
+    display: none;
+}
+/* TOP of CONTENT */
+    /* Heading Area */
+    #headSpace {
+        display: table;
+        width: 100%;
+        padding: 5em 0;
+        text-shadow: 0 1px 2px #bfbfbf;
+    }
+    #headSpace #name {
+        font-size: 40px;
+        letter-spacing: 0.3em;
+        margin-right: -0.3em;
+        text-transform: uppercase;
+    }
+    #headSpace #occu {
+        margin-top: 0.25em;
+        font-family: 'Satisfy', cursive;
+        font-size: 36px;
+        font-weight: normal;
+        /* letter-spacing: 0.1em; */
+        /* margin-right: -0.1em; */
+    }
+    #name, #occu {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+/* MAIN CONTENT */
+    /* Nav */
+    #navi {
+        display: table;
+        margin: 0 auto;
+        /* margin-bottom: 32px; */
+        padding: 8px 0;
+    }
+    #navi button {
+        display: inline-block;
+        margin-right: 8px;
+        padding: 8px 10px;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        color: inherit;
+        background-color: inherit;
+        border: none;
+        
+        transition: box-shadow 200ms linear;
+    }
+    #navi button:last-child {
+        margin-right: 0;
+    }
+    #navi button:hover {
+        /* box-shadow: 0 -2px #0d0d0d inset; */
+        text-decoration: underline;
+    }
+    #navi button:focus {
+        outline: 0;
+    }
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        background-color: #ffffff;
+    }
+    .sticky + #about {
+        padding-top: 54px;
+    }
+    /* About Area */
+    #about {
+        padding: 0 8px;
+        color: #ffffff;
+        background-color: #a6a6a6;
+    }
+    .aboutPara {
+        margin-top: 0;
+    }
+    .aboutPara:last-child {
+        margin-bottom: 0;
+        padding-bottom: 1em;
+    }
+    #portrait {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 2em auto;
+        background-color: #ffffff;
+        border-radius: 50%;
+        box-shadow: 0 2px 8px rgba(13, 13, 13, 0.3);
+    }
+    /* Portfolio Area */
+    
+    #portfolio {
+        display: block;
+        width: 100%;
+    }
+    #about h2, #portfolio h2 {
+        margin: 0;
+        padding: 3em 0;
+        text-align: center;
+    }
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+    .column {
+        max-width: 25%;
+        padding: 0 4px;
+    }
+    .column img {
+        margin-bottom: 8px;
+        width: 100%;
+        vertical-align: middle;
+        box-shadow: 0 2px 4px #4d4d4d;
+    }
+    .testimony {
+        perspective: 1000px;
+    }
+    #columnTwo {
+        padding-top: 150px;
+    }
+    #columnFour {
+        padding-top: 75px;
+    }
+    /* Both About/Portfolio */
+    #about, #portfolio {
+        padding-bottom: 72px;
+    }
+/* BOTTOM of CONTENT */
+    /* Footer Area */
+    #foot {
+        width: 100%;
+        padding: 32px 0;
+        font-size: 1rem;
+        color: #ffffff;
+        text-align: center;
+        background-color: #a6a6a6;
+    }
+    #social #label {
+        display: block;
+        text-align: center;
+    }
+    #social-links {
+        display: table;
+        margin: 0 auto;
+        padding-top: 8px;
+        font-size: 0.9rem;
+    }
+    #social-links a {
+        display: inline-block;
+        margin-right: 8px;
+        font-size: 1.5rem;
+        font-weight: normal;
+        color: #ffffff;
+    }
+    #social-links a:last-child {
+        margin-right: 0;
+    }
+    #LSWeb {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 4px;
+        font-family: 'ZCOOL QingKe HuangYou', cursive;
+        font-size: 1.1rem;
+        color: inherit;
+        text-decoration: none;
+    }
