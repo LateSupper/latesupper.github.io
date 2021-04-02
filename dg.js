@@ -19,13 +19,11 @@ function dmS() {
 function sdm(mode) {
     if (mode == "T") {
         document.getElementsByTagName("body").item(0).classList.add("dm");
-        debugger;
         var elems = document.querySelectorAll("body *");
         elems.forEach(e => { e.classList.add("dm"); });
     } else {
         document.getElementsByTagName("body").item(0).classList.remove("dm");
         var elems = document.querySelectorAll("body *");
-        debugger;
         elems.forEach(e => { if (e.classList.contains("dm")) { e.classList.remove("dm"); }});
     }
 }
