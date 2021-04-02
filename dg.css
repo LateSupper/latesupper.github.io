@@ -4,8 +4,8 @@
 }
 
 body { margin: 0; font-family: 'Open Sans', serif; background-color: #e5e5e5; }
-body.dm { color: #ffffff; background-color: #262626; }
-body * { text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5); box-sizing: border-box; }
+body.dm { color: #ffffff !important; background-color: #262626 !important; }
+body * { text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5); box-sizing: border-box; transition: color 0.1s linear, background-color 0.2s linear; }
 
 #page { position: relative; min-width: 320px; padding-top: 63px; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 

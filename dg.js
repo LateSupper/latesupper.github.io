@@ -19,48 +19,14 @@ function dmS() {
 function sdm(mode) {
     if (mode == "T") {
         document.getElementsByTagName("body").item(0).classList.add("dm");
-        var asec = document.getElementsByClassName("a-sec"), bsec = document.getElementsByClassName("b-sec");
-        for (i = 0; i < asec.length; i++) {
-            asec[i].classList.add("dm");
-        }
-        for (i = 0; i < bsec.length; i++) {
-            bsec[i].classList.add("dm");
-        }
-        document.getElementById("head").classList.add("dm");
-        document.getElementById("dm").classList.add("dm");
-        document.getElementById("dms").classList.add("dm");
-        document.getElementById("dms-k").classList.add("dm");
-        document.getElementById("mnav").classList.add("dm");
-        document.getElementById("intro").classList.add("dm");
-        document.getElementById("sl").classList.add("dm");
-        document.getElementById("osl").classList.add("dm");
-        var porti = document.getElementsByClassName("porti");
-        for (i = 0; i < porti.length; i++) {
-            porti[i].classList.add("dm");
-        }
-        document.getElementById("foot").classList.add("dm");
+        debugger;
+        var elems = document.querySelectorAll("body *");
+        elems.forEach(e => { e.classList.add("dm"); });
     } else {
         document.getElementsByTagName("body").item(0).classList.remove("dm");
-        var asec = document.getElementsByClassName("a-sec"), bsec = document.getElementsByClassName("b-sec");
-        for (i = 0; i < asec.length; i++) {
-            asec[i].classList.remove("dm");
-        }
-        for (i = 0; i < bsec.length; i++) {
-            bsec[i].classList.remove("dm");
-        }
-        document.getElementById("head").classList.remove("dm");
-        document.getElementById("dm").classList.remove("dm");
-        document.getElementById("dms").classList.remove("dm");
-        document.getElementById("dms-k").classList.remove("dm");
-        document.getElementById("mnav").classList.remove("dm");
-        document.getElementById("intro").classList.remove("dm");
-        document.getElementById("sl").classList.remove("dm");
-        document.getElementById("osl").classList.remove("dm");
-        var porti = document.getElementsByClassName("porti");
-        for (i = 0; i < porti.length; i++) {
-            porti[i].classList.remove("dm");
-        }
-        document.getElementById("foot").classList.remove("dm");
+        var elems = document.querySelectorAll("body *");
+        debugger;
+        elems.forEach(e => { if (e.classList.contains("dm")) { e.classList.remove("dm"); }});
     }
 }
 
@@ -69,10 +35,10 @@ function sY() {
     document.getElementById("year").innerHTML = y.getFullYear();
 }
 
-$(document).ready(function() {
-    dmS();
-    sY();
+dmS();
+sY();
 
+$(document).ready(function() {
     var ht = document.getElementById("headtext");
     var htv = "info";
     var i = 0, s = 120, fv = "a", ft = true;
