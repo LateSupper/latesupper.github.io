@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Frame</title>
+        <style>
+            html, body { height: 100%; background-color: #000; }
+            body { margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 12px; }
+            body * { box-sizing: border-box; }
+            #frameflex { position: relative; display: flex; flex-direction: row; justify-content: center; align-items: center; width: 100%; height: 100%; }
+            #frame { width: 996px; height: 600px; }
+            .frameposition { position: absolute; display: table; width: 24px; height: 24px; background-color: #f2f2f2; border-radius: 4px; }
+            .frameposition:hover { cursor: pointer; }
+            .frameposition>span { display: table-cell; text-align: center; vertical-align: middle; }
+            .frameposition#center { top: 0; left: 50%; transform: translate(-50%, calc(-100% - 2px)); }
+            .frameposition#topleft { top: 0; left: 0; transform: translate(calc(-100% - 2px), calc(-100% - 2px)); }
+            .frameposition#topright { top: 0; right: 0; transform: translate(calc(100% + 2px), calc(-100% - 2px)); }
+            .frameposition#bottomleft { left: 0; bottom: 0; transform: translate(calc(-100% - 2px), calc(100% + 2px)); }
+            .frameposition#bottomright { right: 0; bottom: 0; transform: translate(calc(100% + 2px), calc(100% + 2px)); }
+        </style>
+    </head>
+    <body>
+        <div id="frameflex">
+            <div style="position: relative; margin: 40px;">
+                <div class="frameposition" id="center" onclick="changePosition('C')"><span>C</span></div>
+                <div class="frameposition" id="topleft" onclick="changePosition('TL')"><span>T-L</span></div>
+                <div class="frameposition" id="topright" onclick="changePosition('TR')"><span>T-R</span></div>
+                <div class="frameposition" id="bottomleft" onclick="changePosition('BL')"><span>B-L</span></div>
+                <div class="frameposition" id="bottomright" onclick="changePosition('BR')"><span>B-R</span></div>
+                <iframe id="frame" src="https://www.legendsofidleon.com/ytGl5oc/" title="Legends of Idleon"></iframe>
+                <!-- https://www.legendsofidleon.com/ytGl5oc/ -->
+            </div>
+        </div>
+        <script>
+            (function () {
+                if (localStorage.getItem("frameposition") !== null) {
+                    changePosition(localStorage.getItem("frameposition"));
+                }
+            })()
+            function changePosition(direction) {
+                var frmflx = document.getElementById("frameflex");
+                switch (direction) {
+                    case "C":
+                        frmflx.style.justifyContent = "center";
+                        frmflx.style.alignItems = "center";
+                        localStorage.setItem("frameposition", "C");
+                        break;
+                    case "TL":
+                        frmflx.style.justifyContent = "flex-start";
+                        frmflx.style.alignItems = "flex-start";
+                        localStorage.setItem("frameposition", "TL");
+                        break;
+                    case "TR":
+                        frmflx.style.justifyContent = "flex-end";
+                        frmflx.style.alignItems = "flex-start";
+                        localStorage.setItem("frameposition", "TR");
+                        break;
+                    case "BL":
+                        frmflx.style.justifyContent = "flex-start";
+                        frmflx.style.alignItems = "flex-end";
+                        localStorage.setItem("frameposition", "BL");
+                        break;
+                    case "BR":
+                        frmflx.style.justifyContent = "flex-end";
+                        frmflx.style.alignItems = "flex-end";
+                        localStorage.setItem("frameposition", "BR");
+                        break;
+                }
+            }
+        </script>
+    </body>
+</html>
