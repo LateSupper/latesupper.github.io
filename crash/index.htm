@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Crash!</title>
+        <style>
+            html, body { height: 100%; background-color: #707070; }
+            body { margin: 0; font-family: Flama, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji; font-size: 16px; color: #f2f2f2; }
+            body * { box-sizing: border-box; }
+            #crash { position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; padding: 16px; }
+            #crash_number { position: relative; display: table; width: 300px; height: 300px; margin: 0 auto 32px; font-size: 2.69em; background-color: hsl(0, 0%, 33%); border-radius: 50%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); -webkit-transition: box-shadow 0.64s; -moz-transition: box-shadow 0.64s; -ms-transition: box-shadow 0.64s; -o-transition: box-shadow 0.64s; transition: box-shadow 0.64s; z-index: 2; }
+            #crash_number.explode { box-shadow: 0 0 20px rgba(255, 102, 0, 0.8), 0 0 40px rgba(255, 102, 0, 0.6), 0 0 60px rgba(255, 102, 0, 0.4), 0 0 80px rgba(255, 102, 0, 0.2); }
+            #crash_control { position: relative; text-align: center; z-index: 1; }
+            #crash_wager, #crash_wallet { margin-bottom: 16px; font-size: 24px; }
+            #crash_current_wager, #crash_balance { color: lightgoldenrodyellow; }
+            #crash_bet a { flex: 1 1 auto; display: block; margin: 4px; padding: 4px 4px 6px; font-size: 16px; text-decoration: none; color: gold; border: 1px solid #f2f2f2; border-radius: 4px; }
+            #play_crash { display: block; width: 180px; margin: 8px auto; padding: 8px 8px 12px; font-size: 24px; text-decoration: none; color: #f2f2f2; background-color: forestgreen; border-radius: 4px; box-shadow: 0 -2px 1px rgba(0 0 0 / 50%) inset, 0 1px 1px rgba(255 255 255 / 50%) inset; }
+        </style>
+    </head>
+    <body>
+        <div id="crash">
+            <div id="crash_number">
+                <div style="display: table-cell; text-align: center; vertical-align: middle;">
+                    x<span id="crash_counter">1.00</span>
+                </div>
+            </div>
+            <div id="crash_control">
+                <div id="crash_wager">
+                    <div style="color: gold;">Current Bet</div>
+                    <span style="color: gold;">$</span>&nbsp;<span id="crash_current_wager">0.00</span>
+                </div>
+                <div id="crash_wallet">
+                    <div style="color: gold;">Available Balance</div>
+                    <span style="color: gold;">$</span>&nbsp;<span id="crash_balance">5.00</span>
+                </div>
+                <div id="crash_bet">
+                    <div style="display: flex; flex-direction: row;">
+                        <a href="javascript:void(0);" data-amount="-0.01">-0.01</a>
+                        <a href="javascript:void(0);" data-amount="-0.1">-0.1</a>
+                        <a href="javascript:void(0);" data-amount="-1">-1</a>
+                    </div>
+                    <div style="display: flex; flex-direction: row;">
+                        <a href="javascript:void(0);" data-amount="0.01">+0.01</a>
+                        <a href="javascript:void(0);" data-amount="0.1">+0.1</a>
+                        <a href="javascript:void(0);" data-amount="1">+1</a>
+                    </div>
+                </div>
+                <a href="javascript:void(0);" id="play_crash" onclick="start_crash()">Play</a>
+            </div>
+        </div>
+        <script>
+            const cc = document.getElementById("crash_counter");
+            const cn = document.getElementById("crash_number");
+            var ccn = 1.00;
+            var inbounder = null;
+
+            // dec2hex :: Integer -> String
+            // i.e. 0-255 -> '00'-'ff'
+            function dec2hex(dec) {
+                return dec.toString(16).padStart(2, "0");
+            }
+
+            // generateId :: Integer -> String
+            function generateId(len) {
+                var arr = new Uint8Array((len || 40) / 2);
+                window.crypto.getRandomValues(arr);
+                return Array.from(arr, dec2hex).join('');
+            }
+
+            function start_crash() {
+                if (inbounder !== null) {
+                    clearInterval(inbounder);
+                    inbounder = null;
+                    ccn = 1.00;
+                    cc.innerText = ccn.toFixed(2);
+                } else {
+                    var hash = generateId(64).toString();
+                    var h = parseInt(hash.slice(0, 52 / 4), 16);
+                    var e = Math.pow(2, 52);
+
+                    const result = (100 * e - h) / (e - h);
+
+                    const INSTANT_CRASH_PERCENTAGE = 6.66;
+                    const houseEdgeModifier = 1 - INSTANT_CRASH_PERCENTAGE / 100;
+
+                    const endResult = (Math.max(100, result * houseEdgeModifier) / 100).toFixed(2);
+                    console.log(endResult);
+
+                    inbounder = setInterval(function () {
+                        ccn = ccn + (ccn * 0.000142069);
+                        cc.innerText = parseFloat(ccn).toFixed(2);
+                        if (ccn >= endResult) {
+                            crash();
+                        }
+                    }, 1);
+                }
+            }
+
+            function crash() {
+                clearInterval(inbounder);
+
+                var EXPLOSION = new Audio();
+                EXPLOSION.src = "sound/explosion.wav";
+                EXPLOSION.volume = 0.05;
+                EXPLOSION.play();
+
+                if (!cn.classList.contains("explode")) {
+                    cn.classList.add("explode");
+                    setTimeout(function () {
+                        inbounder = null;
+                        ccn = 1.00;
+                        cc.innerText = ccn.toFixed(2);
+                        cn.classList.remove("explode");
+                    }, 2500);
+                }
+            }
+        </script>
+    </body>
+</html>
