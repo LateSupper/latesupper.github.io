@@ -14,7 +14,7 @@
             #crash_control { position: relative; text-align: center; z-index: 1; }
             #crash_wager, #crash_wallet { margin: 16px 0; font-size: 24px; }
             #crash_current_wager, #crash_balance { color: lightgoldenrodyellow; }
-            #crash_bet a { flex: 1 1 auto; display: block; margin: 4px; padding: 4px 4px 6px; font-size: 16px; text-decoration: none; color: inherit; background-color: #f2f2f2; border: 1px solid #f2f2f2; border-radius: 4px; }
+            #crash_bet a { flex: 1 1 auto; display: block; margin: 4px; padding: 4px 4px 6px; font-size: 16px; text-decoration: none; color: inherit; background-color: #f2f2f2; border: 1px solid #f2f2f2; border-radius: 4px; user-select: none; }
             #play_crash { display: block; width: 180px; margin: 8px auto; padding: 8px 8px 12px; font-size: 24px; text-decoration: none; color: #f2f2f2; background-color: forestgreen; border-radius: 4px; box-shadow: 0 -2px 1px rgba(0 0 0 / 50%) inset, 0 1px 1px rgba(255 255 255 / 50%) inset; }
             #play_crash.disabled { background-color: grey; pointer-events: none; }
         </style>
@@ -123,7 +123,7 @@
                     // console.log(endResult);
 
                     inbounder = setInterval(function () {
-                        ccn = ccn + (ccn * 0.000942069);
+                        ccn = ccn + (ccn * 0.000142069);
                         cc.innerText = parseFloat(ccn).toFixed(2);
                         if (ccn >= endResult) {
                             crash(btn, endResult);
