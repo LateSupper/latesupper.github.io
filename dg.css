@@ -5,15 +5,15 @@
 
 body { margin: 0; font-family: 'Open Sans', serif; background-color: #e5e5e5; }
 body.dm { color: #ffffff !important; background-color: #262626 !important; }
-body * { text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5); box-sizing: border-box; transition: color 0.1s linear, background-color 0.2s linear; }
+body * { text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5); box-sizing: border-box; transition: color 0.05s linear, background-color 0.2s linear; }
 
 #page { position: relative; min-width: 320px; padding-top: 63px; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 
 .a-sec { background-color: #e5e5e5; }
 .a-sec.dm { background-color: #262626; }
 .b-sec { background-color: #cccccc; }
-.b-sec.dm { background-color: #404040; }
-.a-sec, .b-sec { padding: 96px 16px; font-size: 22px; }
+.b-sec.dm { background-color: #313131; }
+.a-sec, .b-sec { min-height: 100%; padding: 120px 16px; font-size: 20px; }
 
 #head { position: fixed; top: 0; left: 0; width: 100%; padding: 16px; font-family: Arial, Helvetica, sans-serif; background-color: #f2f2f2; box-shadow: 0 0 4px rgba(0, 0, 0, 0.5); transition: padding 0.25s; z-index: 10; }
 #head.dm { background-color: #1a1a1a; }
@@ -45,7 +45,7 @@ body * { text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5); box-sizing: border-box; tran
 #intro.dm img { background-color: rgba(255, 255, 255, 0.15); }
 
 #sl { display: flex; flex-direction: row; flex-wrap: wrap; }
-.skili { display: inline-block; flex: 100%; margin: 6px; padding: 16px 5px; font-family: Arial, Helvetica, sans-serif; font-size: 24px; font-weight: bold; color: #6600ff; text-align: center; background-color: #ffffff; border-radius: 6px; box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.33) inset; }
+.skili { display: inline-block; flex: 100%; margin: 6px; padding: 16px 5px; font-family: Arial, Helvetica, sans-serif; font-size: 26px; font-weight: bold; color: #6600ff; text-align: center; background-color: #ffffff; border-radius: 6px; box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.33) inset; }
 #sl.dm .skili { background-color: #d9d9d9; }
 #osl { display: table; margin: 8px auto; padding: 0; list-style-type: none; }
 #osl li::before { content: '\2022'; width: 1em; margin-left: 0.5em; margin-right: 0.5em; font-size: 22pt; font-weight: bold; color: #6600ff; text-shadow: none; }
@@ -72,7 +72,7 @@ body * { text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5); box-sizing: border-box; tran
 }
 @media screen and (min-width: 1024px) {
     #page { padding-top: 114px; }
-    .a-sec, .b-sec { padding: 200px 16%; }
+    .a-sec, .b-sec { padding: 250px 16%; }
     #head { padding: 32px 16px; }
     #headtext, #headtext span { font-size: 1.66em; }
     #head nav a { margin: 11px 0; font-size: 1.5em; }
