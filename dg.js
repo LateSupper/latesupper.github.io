@@ -88,7 +88,7 @@ $(document).ready(function() {
     $("#skl").click(function() {
         $("#head nav a").css("pointer-events", "none");
         $("html, body").animate({
-            scrollTop: $("#skills").offset().top - 114
+            scrollTop: $("#skills").offset().top
         }, 500);
         setTimeout(function() {
             $("#head nav a").css("pointer-events", "auto");
@@ -97,7 +97,7 @@ $(document).ready(function() {
     $("#prt").click(function() {
         $("#head nav a").css("pointer-events", "none");
         $("html, body").animate({
-            scrollTop: $("#portfolio").offset().top - 114
+            scrollTop: $("#portfolio_top").offset().top - 100
         }, 500);
         setTimeout(function() {
             $("#head nav a").css("pointer-events", "auto");
@@ -116,7 +116,7 @@ $(document).ready(function() {
     $("#sklM").click(function() {
         $("#mnav a").css("pointer-events", "none");
         $("html, body").animate({
-            scrollTop: $("#skills").offset().top - 114
+            scrollTop: $("#skills").offset().top
         }, 500);
         setTimeout(function() {
             $("#mnav a").css("pointer-events", "auto");
@@ -125,7 +125,7 @@ $(document).ready(function() {
     $("#prtM").click(function() {
         $("#mnav a").css("pointer-events", "none");
         $("html, body").animate({
-            scrollTop: $("#portfolio").offset().top - 114
+            scrollTop: $("#portfolio").offset().top - 210
         }, 500);
         setTimeout(function() {
             $("#mnav a").css("pointer-events", "auto");
