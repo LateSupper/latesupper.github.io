@@ -45,7 +45,7 @@ class Wheel {
     var htm = "", winCount = 1
 
     this.history.querySelectorAll(".history-item").forEach(w => {
-      if (w.textContent.includes(winner)) winCount += 1
+      if (w.textContent === winner) winCount += 1
     })
     if (winCount > 1)
       htm = `<div class="history-item">[<span>${winCount}</span>] ${winner}</div>`

@@ -136,10 +136,10 @@ function init() {
   updateWheel()
 
   wheel.sound.playbackRate = 0.75
-  wheel.sound.volume = 0.16
+  wheel.sound.volume = 0.05
 
   wheel.winSound.playbackRate = 1.666
-  wheel.winSound.volume = 0.16
+  wheel.winSound.volume = 0.05
 }
 
 (() => {
