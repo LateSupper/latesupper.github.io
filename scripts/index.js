@@ -20,7 +20,7 @@ function sitemap() {
                 <a href="/sites/${d[i]}/index.htm" class="${c}">
                     <figure>
                         <figcaption>${dc}</figcaption>
-                        <img src="public/images/screenshots/${d[i]}.jpg" alt="${dc}" width="1920" height="1080">
+                        <img src="screenshots/${d[i]}.jpg" alt="${dc}" width="1920" height="1080">
                         <figcaption>${dd[i]}</figcaption>
                     </figure>
                 </a>`);
