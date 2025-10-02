@@ -1,0 +1,185 @@
+:root {
+    --multi-breathe-duration: 250ms;
+    --fg: #f2f2f2;
+    --bg: #202020;
+}
+
+@keyframes multibreathe {
+    0% {
+        transform: scale(1, 1);
+    }
+    100% {
+        transform: scale(1.1, 1.1);
+    }
+}
+@keyframes multicrashed {
+    10% {
+        transform: scale(1.3, 1.3);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 1.1rem;
+    color: var(--fg);
+    background-color: var(--bg);
+    user-select: none;
+}
+button, input {
+    font-size: inherit;
+}
+
+#content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    max-width: 320px;
+    height: 100%;
+    margin: 0 auto;
+}
+#content > * {
+    width: 100%;
+}
+
+#countdown {
+    position: absolute;
+    top: 0; left: 50%;
+    padding: 4px;
+    text-align: center;
+    border: 1px dashed orange;
+    opacity: 1;
+    transform: translate(-50%, 0);
+    transition: opacity 100ms;
+}
+#countdown.hide {
+    opacity: 0;
+}
+#countdown span {
+    color: orange;
+}
+
+#multibox {
+    width: 300px;
+    height: 300px;
+    margin: 4em 0;
+}
+#multi {
+    display: table;
+    width: 100%;
+    height: 100%;
+    color: var(--bg);
+    background-color: var(--fg);
+    border-radius: 50%;
+    transition: transform var(--multi-breathe-duration) ease-in-out, color var(--multi-breathe-duration) ease-in-out;
+    animation-duration: var(--multi-breathe-duration);
+}
+#multi.breathe {
+    animation-name: multibreathe;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+#multi.crashed {
+    animation-name: multicrashed;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-duration: 1000ms;
+    color: red;
+}
+#multi span {
+    display: table-cell;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-size: 4rem;
+    text-align: center;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+#cashout {
+    margin: 0 0 1em;
+    padding: 0.25em 0;
+    font-size: 1.77em;
+    color: var(--fg);
+    background-color: green;
+    border: 2px solid var(--fg);
+    border-radius: 4px;
+    visibility: hidden;
+}
+#cashout.show {
+    visibility: visible;
+}
+
+#current-wager > div {
+    margin-top: 4px;
+    font-size: 2em;
+    border-top: 1px solid var(--fg);
+}
+#wager.hide {
+    visibility: hidden;
+}
+#wager > * {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#wager button, #custom input[type=number] {
+    padding: 8px;
+    font-family: monospace;
+    color: var(--fg);
+    background-color: var(--bg);
+    border: 1px solid var(--fg);
+    border-radius: 4px;
+    transition: box-shadow 100ms;
+    cursor: pointer;
+}
+#wager button:hover, #custom input[type=number]:hover {
+    box-shadow: 0 0 0 2px var(--fg);
+}
+#wager #add, #wager #custom {
+    margin: 0.5em 0;
+}
+#wager #add button:not(:last-of-type) {
+    color: limegreen;
+}
+
+#cointainer {
+    margin: 1em 0;
+    /* border: 1px solid var(--fg); */
+}
+#cointainer > * {
+    padding: 0.25em 0;
+}
+#cointainer span {
+    display: block;
+}
+#cointainer div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    font-family: monospace;
+    border-top: 1px solid var(--fg);
+    transition: background-color 500ms ease-in-out;
+}
+#cointainer div > * {
+    margin: 4px;
+}
+#cointainer div.win {
+    background-color: green;
+}
+#cointainer div.lose {
+    background-color: darkred;
+}

@@ -1,0 +1,68 @@
+* {
+    box-sizing: content-box;
+}
+html, body {
+    height: 100%;
+    color: white;
+    background-color: black;
+    overflow: auto;
+}
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 18px;
+}
+
+#logo {
+    display: block;
+    width: auto;
+    height: auto;
+    max-height: 64px;
+    margin: 16px auto;
+}
+h2 {
+    position: sticky;
+    top: 0; left: 0;
+    margin: 0;
+    padding: 0.5em;
+    text-align: center;
+    background-color: black;
+}
+#sideMissionList {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1em;
+    color: white;
+    background-color: #404040;
+}
+.mission {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - (0.25em * 2));
+    margin: 0 0 1em 0;
+    padding: 0.25em;
+    background-color: rgba(0 0 0 / 25%);
+    border-radius: 4px;
+}
+.mission:last-of-type {
+    margin: 0;
+}
+.mission > * {
+    margin: 4px;
+}
+.mission a {
+    flex: 0 1 auto;
+    color: white;
+}
+.mission input[type='checkbox'] {
+    flex: 0 0 auto;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheel of Fate</title>
+    <!-- Google Font: Metal Mania -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+    <link rel="icon" href="src/images/favicon.ico">
+    <link rel="stylesheet" href="styles/site.css">
+  </head>
+  <body>
+    <div id="content">
+      <div id="panel-1">
+        <h2>Options</h2>
+        <div id="option-buttons">
+          <a href="javascript:void(0)" id="add-option" onclick="addOption()">Add</a>
+          <a href="javascript:void(0)" id="remove-option" onclick="removeOption()">Remove Last</a>
+        </div>
+        <div id="option-count"><span>2</span>/20 options (2 minimum)</div>
+        <div id="options">
+          <input class="option" value="Option 1"></input>
+          <input class="option" value="Option 2"></input>
+        </div>
+      </div>
+      <div id="wheel-content">
+        <h1>Wheel of Fate</h1>
+        <div id="wheel-box">
+          <div id="wheel" onclick="spinWheel()"></div>
+          <div id="arrow"></div>
+          <div id="dot"></div>
+        </div>
+      </div>
+      <div id="panel-2">
+        <h2>History</h2>
+        <div style="text-align: center;">
+          <input type="checkbox" id="keep-previous" />
+          <label for="keep-previous">Keep History After Add/Remove</label>
+        </div>
+        <div id="history"></div>
+      </div>
+    </div>
+
+    <div id="fire"></div>
+
+    <audio id="wheel-sound">
+      <source src="src/sounds/wheel.mp3" type="audio/mp3">
+    </audio>
+    <audio id="win-sound">
+      <source src="src/sounds/win.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="scripts/util.js"></script>
+    <script src="scripts/class.js"></script>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>

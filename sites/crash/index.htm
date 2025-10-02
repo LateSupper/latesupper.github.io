@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Crash!</title>
+        <link rel="stylesheet" href="styles/crash.css">
+    </head>
+    <body>
+        <div id="content">
+            <div id="countdown">
+                Auto-play in <span id="time"></span> seconds
+            </div>
+            <div id="multibox">
+                <div id="multi">
+                    <span>x1.00</span>
+                </div>
+            </div>
+            <button id="cashout" onclick="CRASH.cashOut()">Cash Out</button>
+            <div id="current-wager">
+                Current Wager
+                <div id="my-wager">0</div>
+            </div>
+            <div id="wager">
+                <div id="add">
+                    <button onclick="CRASH.clearWager()">Reset</button>
+                </div>
+                <div id="custom">
+                    <input type="number" value="0" min="0"
+                        onkeydown="return CRASH.validateCustomWager(event)"
+                        onkeyup="return CRASH.validateCustomWager(event)">
+                    <button onclick="CRASH.wagerCustom()">Wager</button>
+                </div>
+            </div>
+            <div id="cointainer">
+                <span>Balance</span>
+                <div>
+                    <img src="images/coin.png">
+                    <span id="balance">100</span>
+                </div>
+            </div>
+        </div>
+
+        <script src="scripts/crash.js"></script>
+    </body>
+</html>
