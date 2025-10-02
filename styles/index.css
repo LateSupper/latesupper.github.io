@@ -39,7 +39,7 @@ body {
     color: black;
     background-color: white;
     border: 1px solid black;
-    transform: translate(-50%, 75%);
+    transform: translate(-50%, 0);
     visibility: hidden;
     z-index: 4444;
 }
