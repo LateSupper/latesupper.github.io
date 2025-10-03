@@ -20,6 +20,14 @@
         transform: scale(1, 1);
     }
 }
+@keyframes potbreathe {
+    0% {
+        transform: translate(-50%, -150%) scale(1, 1);
+    }
+    100% {
+        transform: translate(-50%, -150%) scale(1.2, 1.2);
+    }
+}
 
 * {
     box-sizing: border-box;
@@ -58,10 +66,12 @@ button, input {
     top: 4px; left: 50%;
     padding: 4px;
     text-align: center;
+    background-color: rgba(0 0 0 / 75%);
     border: 1px dashed orange;
     opacity: 1;
     transform: translate(-50%, 0);
     transition: opacity 100ms;
+    z-index: 1;
 }
 #countdown.hide {
     opacity: 0;
@@ -71,6 +81,7 @@ button, input {
 }
 
 #multibox {
+    position: relative;
     width: 300px;
     height: 300px;
     margin: 2.5em 0;
@@ -104,6 +115,24 @@ button, input {
     text-align: center;
     line-height: 1;
     vertical-align: middle;
+}
+#multibox #pot {
+    position: absolute;
+    bottom: 0; left: 50%;
+    font-family: monospace;
+    font-size: 1.5em;
+    color: gold;
+    text-shadow: 1px 0 0 black, 0 1px 0 black, -1px 0 0 black, 0 -1px 0 black;
+    transform: translate(-50%, -150%);
+    transition: transform var(--multi-breathe-duration) ease-in-out;
+    animation-duration: var(--multi-breathe-duration);
+    visibility: hidden;
+}
+#multibox #pot.show {
+    animation-name: potbreathe;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    visibility: visible;
 }
 
 #cashout {

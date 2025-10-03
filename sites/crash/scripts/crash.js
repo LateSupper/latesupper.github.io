@@ -3,7 +3,6 @@ class Crash {
         this.COUNTDOWN_MAX = 10.0;
         this.DEFAULT_BALANCE = 1000;
         this.DEFAULT_CRASH = 1.00;
-        // this.COIN_GENERATION_RATE = 1000 * 30;
         this.crash = this.DEFAULT_CRASH;
         this.countdown = null;
         this.countdownTime = this.COUNTDOWN_MAX;
@@ -17,18 +16,17 @@ class Crash {
         this.eMulti = document.querySelector('#multi');
         this.eMultiN = document.querySelector('#multi span');
         this.eMyWager = document.querySelector('#my-wager');
+        this.ePot = document.querySelector('#pot');
         this.eTime = document.querySelector('#time');
         this.eWager = document.querySelector('#wager');
         this.generator = null;
         this.playing = false;
+        this.pot = 0;
     }
 
-    // dec2hex :: Integer -> String
-    // i.e. 0-255 -> '00'-'ff'
     dec2hex(dec) {
         return dec.toString(16).padStart(2, "0");
     }
-    // generateId :: Integer -> String
     generateId(len) {
         var arr = new Uint8Array((len || 40) / 2);
         window.crypto.getRandomValues(arr);
@@ -112,14 +110,7 @@ class Crash {
         this.toggleCountdownHide();
 
         this.currentWager = parseInt(this.eMyWager.textContent);
-        // if (this.currentWager <= 0) {
-        //     setTimeout(() => {
-        //         this.toggleWagerHide();
-        //         this.toggleCountdownHide();
-        //         this.startCountdown();
-        //     }, 500);
-        //     return;
-        // }
+        this.pot = this.currentWager;
         this.eBalance.textContent = this.eBalance.textContent - this.currentWager;
 
         var hash = this.generateId(64).toString();
@@ -133,23 +124,29 @@ class Crash {
         if (this.currentWager > 0) {
             this.playing = true;
             this.toggleCashoutShow();
+            this.togglePotShow();
         }
         this.toggleMultiBreathe();
         this.session = setInterval(() => {
             if (this.crash >= endResult) {
                 clearInterval(this.session);
-                if (this.playing) this.toggleCashoutShow();
+                if (this.playing) {
+                    this.toggleCashoutShow();
+                    this.togglePotShow();
+                }
                 this.playing = false;
                 this.eMultiN.textContent = `x${parseFloat(endResult).toFixed(2)}`;
                 this.endCrash();
             } else {
                 this.crash += (this.crash * 0.000777); // speed
+                this.pot = parseInt(this.currentWager * this.crash.toFixed(2));
                 this.eMultiN.textContent = `x${this.crash.toFixed(2)}`;
+                this.ePot.textContent = `+${this.pot}`;
             }
         }, 1);
     }
     endCrash() {
-        this.playAudioEXPLOSION();
+        // this.playAudioEXPLOSION(); // No more explosion :( see comment above function
         this.toggleMultiCrashed();
         setTimeout(() => {
             this.resetCrash();
@@ -168,9 +165,9 @@ class Crash {
     cashOut() {
         this.playing = false;
         this.toggleCashoutShow();
+        this.togglePotShow();
         this.toggleCointainerWin();
-        var nb = parseInt(this.currentWager * this.crash);
-        this.eBalance.textContent = parseInt(this.eBalance.textContent) + nb;
+        this.eBalance.textContent = parseInt(this.eBalance.textContent) + this.pot;
         setTimeout(() => {
             this.toggleCointainerWin();
         }, 3000);
@@ -185,6 +182,9 @@ class Crash {
     toggleMultiCrashed() {
         this.eMulti.classList.toggle('crashed');
     }
+    togglePotShow() {
+        this.ePot.classList.toggle('show');
+    }
     toggleCashoutShow() {
         this.eCashout.classList.toggle('show');
     }
@@ -198,17 +198,12 @@ class Crash {
         this.eCointainerDiv.classList.toggle('lose');
     }
 
-    playAudioEXPLOSION() {
-        var EXPLOSION = new Audio();
-        EXPLOSION.src = "sound/explosion.wav";
-        EXPLOSION.volume = 0.05;
-        EXPLOSION.play();
-    }
-
-    // generateCoins() {
-    //     this.generator = setInterval(() => {
-    //         this.eBalance.textContent = parseInt(this.eBalance.textContent) + 1;
-    //     }, this.COIN_GENERATION_RATE);
+    // EXPLOSION removed per request from tester (Cole A. Hass)
+    // playAudioEXPLOSION() {
+    //     var EXPLOSION = new Audio();
+    //     EXPLOSION.src = "sound/explosion.wav";
+    //     EXPLOSION.volume = 0.05;
+    //     EXPLOSION.play();
     // }
 }
 
