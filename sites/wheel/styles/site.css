@@ -1,25 +1,22 @@
 :root {
   --heading-size: 135px;
+  --wheel-size-min: 300px;
+  --wheel-size-max: 600px;
 }
 
-
-
+* {
+  box-sizing: border-box;
+}
 html, body {
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 body {
   margin: 0;
   font-family: 'Metal Mania', system-ui;
-  /* font-family: "Comic Sans MS", "Comic Sans", cursive; */
   font-size: 1.2rem;
-  /* text-shadow: 0 1px 3px rgba(255 255 255 / 80%); */
   color: white;
   background-color: #141414;
-}
-body * {
-  box-sizing: border-box;
-  /* "transform" animation issue fix */
 }
 audio {
   display: none;
@@ -70,6 +67,15 @@ h2 {
 }
 
 
+#wheel-box, #wheel {
+  width: 100%;
+  min-width: var(--wheel-size-min);
+  max-width: var(--wheel-size-max);
+  height: 100%;
+  min-height: var(--wheel-size-min);
+  max-height: var(--wheel-size-max);
+}
+
 
 #wheel-box {
   position: relative;
@@ -97,13 +103,8 @@ h2 {
   transform: translate(-50%, -50%);
   z-index: 667;
 }
-
-
-
 #wheel {
   position: relative;
-  width: 600px;
-  height: 600px;
   border-radius: 50%;
   background-color: black;
   border: 5px solid white;
@@ -298,4 +299,17 @@ h2 {
 }
 .d20 {
   clip-path: polygon(50% 100%, 42% 0%, 58% 0%);
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  #content {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1025px) {
+  html, body {
+    overflow: hidden;
+  }
 }

@@ -1,4 +1,4 @@
-const wheel = new Wheel()
+const wheel = new Wheel();
 
 function setupTextBoxes() {
   const tx = document.querySelectorAll(".option")
@@ -142,6 +142,18 @@ function init() {
   wheel.winSound.volume = 0.05
 }
 
+// Resize Func.
+
+
 (() => {
   init()
+
+  // handle wheel resize
+  const wb = document.querySelector('#wheel-box');
+  window.onload = () => {
+    wb.setAttribute('style', `height: ${wb.getBoundingClientRect().width}px;`);
+  };
+  window.addEventListener('resize', () => {
+    wb.setAttribute('style', `height: ${wb.getBoundingClientRect().width}px;`);
+  }, {passive: true});
 })()
