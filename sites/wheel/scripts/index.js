@@ -142,18 +142,15 @@ function init() {
   wheel.winSound.volume = 0.05
 }
 
-// Resize Func.
-
-
 (() => {
   init()
 
   // handle wheel resize
   const wb = document.querySelector('#wheel-box');
-  window.onload = () => {
+  window.self.onload = () => {
     wb.setAttribute('style', `height: ${wb.getBoundingClientRect().width}px;`);
   };
-  window.addEventListener('resize', () => {
+  window.self.addEventListener('resize', () => {
     wb.setAttribute('style', `height: ${wb.getBoundingClientRect().width}px;`);
   }, {passive: true});
 })()
