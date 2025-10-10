@@ -4,14 +4,14 @@ function sitemap() {
         var c = 'sitemap-link';
         var d = [
             'portfolio',
-            'wheel',
             'crash',
+            'wheel',
             'BL4 Side Missions',
         ];
         var dd = [
-            'My portfolio site from 2019 containing past, smaller projects.',
+            'My legacy portfolio site from 2019 containing smaller, design-focused projects.',
             'Wheel to help make a decision.',
-            'Funny-money gambling game. (Work-in-progress)',
+            'Funny-money gambling game.',
             'Collection of Borderlands 4 side missions as a checklist.'
         ]
         for (let i = 0; i < d.length; i++) {
