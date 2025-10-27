@@ -1,27 +1,31 @@
+var TEST_D = null;
+
 function sitemap() {
     var sm = document.querySelector('#sitemap');
     if (sm) {
         var c = 'sitemap-link';
-        var d = [
-            'portfolio',
-            'crash',
-            'wheel',
-            'BL4 Side Missions',
-        ];
-        var dd = [
-            'My legacy portfolio site from 2019 containing smaller, design-focused projects.',
-            'Wheel to help make a decision.',
-            'Funny-money gambling game.',
-            'Collection of Borderlands 4 side missions as a checklist.'
-        ]
-        for (let i = 0; i < d.length; i++) {
-            var dc = d[i].charAt(0).toUpperCase() + d[i].slice(1);
+        const D = {
+            'portfolio': {
+                desc: 'My legacy portfolio site from 2019 containing smaller, design-focused projects.'
+            },
+            'wheel': {
+                desc: 'Wheel to help make a decision.'
+            },
+            'crash': {
+                desc: 'Funny-money gambling game.'
+            },
+            'BL4 Side Missions': {
+                desc: 'Collection of Borderlands 4 side missions as a checklist.'
+            },
+        }
+        for (const property in D) {
+            var dc = property.charAt(0).toUpperCase() + property.slice(1);
             sm.insertAdjacentHTML('beforeend', `
-                <a href="/sites/${d[i]}/index.htm" class="${c}">
+                <a href="/sites/${property}/index.htm" class="${c}">
                     <figure>
                         <figcaption>${dc}</figcaption>
-                        <img src="src/screenshots/${d[i]}.jpg" alt="${dc}" width="1920" height="1080">
-                        <figcaption>${dd[i]}</figcaption>
+                        <img src="src/screenshots/${property}.jpg" alt="${dc}" width="1920" height="1080">
+                        <figcaption>${D[property].desc}</figcaption>
                     </figure>
                 </a>`);
         }
