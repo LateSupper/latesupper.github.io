@@ -17,6 +17,9 @@ function sitemap() {
             'BL4 Side Missions': {
                 desc: 'Collection of Borderlands 4 side missions as a checklist.'
             },
+            'vidilly': {
+                desc: 'A simple, plug-and-play video UI.'
+            }
         }
         for (const property in D) {
             var dc = property.charAt(0).toUpperCase() + property.slice(1);

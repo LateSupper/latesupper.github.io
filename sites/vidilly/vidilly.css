@@ -1,0 +1,175 @@
+:root {
+    --vidilly-primary: rgb(75 0 130);
+    --vidilly-secondary: white;
+    --vidilly-seek-h: 8px;
+    --vidilly-seek-y: calc(32px + (4px * 2));
+    --vidilly-thumb-wh: 9px;
+    --vidilly-br: 4px;
+}
+
+.vidilly {
+    position: relative;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: black;
+    border-radius: var(--vidilly-br);
+    overflow: hidden;
+}
+.vidilly-overlay {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 44;
+}
+.vidilly-overlay:hover {
+    cursor: pointer;
+}
+.vidilly-overlay:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px 6px rgba(255 255 255 / 90%);
+}
+.vidilly-overlay img {
+    display: block;
+    background-color: rgba(0 0 0 / 25%);
+    outline: 6px solid white;
+    border-radius: var(--vidilly-br);
+    transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out;
+}
+.vidilly:hover .vidilly-overlay[style] ~ .vidilly-seek,
+.vidilly:hover .vidilly-overlay[style] ~ .vidilly-controls {
+    opacity: 1;
+}
+.vidilly video {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+.vidilly.fullscreen video {
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+}
+.vidilly-seek:not([value]) {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+.vidilly-seek[value]::-webkit-progress-value,
+.vidilly-seek[value] {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+    bottom: var(--vidilly-seek-y); left: 0;
+    display: block;
+    width: 100%;
+    height: var(--vidilly-seek-h);
+    background-color: white;
+    border: none;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+    opacity: 0;
+    transition: height 100ms ease-in-out, opacity 100ms ease-in-out;
+    z-index: 4;
+}
+.vidilly-seek[value]::-webkit-progress-bar,
+.vidilly-seek[value]::-moz-progress-bar {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--vidilly-primary);
+}
+.vidilly-seek:hover {
+    height: calc(var(--vidilly-seek-h) * 2);
+}
+.vidilly-controls {
+    position: absolute;
+    bottom: 0; left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 4px 8px;
+    background-color: rgba(75 0 130 / 25%);
+    opacity: 0;
+    transition: opacity 100ms ease-in-out;
+}
+.vidilly-controls > * {
+    margin: 0 8px 0 0;
+    border-radius: var(--vidilly-br);
+    transition: background-color 100ms ease-in-out;
+    cursor: pointer;
+}
+.vidilly-controls > *:not([class='vidilly-volume-bar']):not([class='vidilly-spacer']):hover {
+    background-color: rgba(255 255 255 / 25%);
+}
+.vidilly-controls > *:not([class='vidilly-volume-bar']):not([class='vidilly-spacer']) {
+    flex: 0 1 32px;
+    width: 32px;
+    height: 32px;
+}
+.vidilly-controls > .vidilly-spacer {
+    flex: 1 1;
+}
+.vidilly-controls > .vidilly-play {
+    background-image: url(play.png);
+}
+.vidilly-controls > .vidilly-play.pause {
+    background-image: url(pause.png);
+}
+.vidilly-volume {
+    background-image: url(volume.png);
+}
+.vidilly-volume.mute {
+    background-image: url(mute.png);
+}
+
+/* Vidilly - Volume Bar */
+.vidilly-volume-bar {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0;
+    height: var(--vidilly-thumb-wh);
+    background-color: var(--vidilly-primary);
+    border: 2px solid var(--vidilly-secondary);
+    border-radius: var(--vidilly-br);
+    outline: none;
+    transition: width 100ms ease-in-out;
+    overflow: hidden;
+}
+.vidilly-volume-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+}
+.vidilly-volume-bar::-webkit-slider-thumb,
+.vidilly-volume-bar::-moz-range-thumb {
+    width: var(--vidilly-thumb-wh);
+    height: var(--vidilly-thumb-wh);
+    background-color: var(--vidilly-secondary);
+    border: none;
+    border-radius: var(--vidilly-br);
+    outline: none;
+}
+/* END Vidilly - Volume Bar */
+.vidilly-controls:hover .vidilly-volume-bar,
+.vidilly-volume:hover .vidilly-volume-bar,
+.vidilly-volume-bar:hover {
+    width: 100px;
+}
+
+.vidilly-fullscreen {
+    background-image: url(fullscreen.png);
+}
+.vidilly-fullscreen.exit {
+    background-image: url(exit.png);
+}
+
+@media screen and (max-width: 1024px) {
+    .vidilly-seek,
+    .vidilly-controls {
+        display: none;
+    }
+}

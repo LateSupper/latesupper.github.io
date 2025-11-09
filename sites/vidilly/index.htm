@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vidilly</title>
+        <link rel="stylesheet" href="styles/site.css">
+        <link rel="stylesheet" href="vidilly.css">
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <h1>Vidilly</h1>
+                <h3>HTML &lt;video&gt; UI</h3>
+            </header>
+            <main>
+                <div class="showcase">
+                    <p>
+                        Vidilly was created as a fun mini project, and in return provides a simple, 
+                        plug-and-play video user interface.
+                    </p>
+                    <video controls>
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    </video>
+                    <span>Video source: 
+                        <a href="https://www.w3schools.com/html/html5_video.asp" target="_blank">W3Schools.com</a> and 
+                        <a href="https://peach.blender.org/" target="_blank">Big Buck Bunny</a>
+                    </span>
+                    <div id="download-area">
+                        <a id="download" download>Download</a>
+                    </div>
+                    <div id="usage">
+                        <h1>Usage</h1>
+                        <h3>Option 1: Download</h3>
+                        <ol>
+                            <li>Download <code>vidilly.zip</code> using the button above, then extract the <code>vidilly</code> folder to your codebase.</li>
+                            <li>Link the <code>vidilly.css</code> stylesheet to your web page in the <code>&lt;head&gt;</code> tag.</li>
+                            <li>Provide a <code>&lt;script&gt;</code> tag for <code>vidilly.js</code> in your web page at the end of the <code>&lt;body&gt;</code> tag.</li>
+                        </ol>
+                        <h4>Example:</h4>
+<pre>
+&lt;html&gt;
+    &lt;head&gt;
+        ...
+        <i>&lt;!-- "**" being the destination in your codebase --&gt;</i>
+        &lt;link href="**/vidilly/vidilly.css" rel="stylesheet"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        ...
+        <i>&lt;!-- "**" being the destination in your codebase --&gt;</i>
+        &lt;script src="**/vidilly/vidilly.js"&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                        <h3>Option 2: Remote Access</h3>
+                        <ol>
+                            <li>Link the <code>vidilly.css</code> stylesheet to your web page in the <code>&lt;head&gt;</code> tag using the code provided below.</li>
+                            <li>Provide a <code>&lt;script&gt;</code> tag for <code>vidilly.js</code> in your web page at the end of the <code>&lt;body&gt;</code> tag using the code provided below.</li>
+                        </ol>
+                        <!-- &lt;&gt; -->
+                         <h4>Example:</h4>
+<pre>
+&lt;html&gt;
+    &lt;head&gt;
+        ...
+        &lt;link href="https://latesupper.github.io/sites/vidilly/vidilly.css" rel="stylesheet"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        ...
+        &lt;script src="https://latesupper.github.io/sites/vidilly/vidilly.js"&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                    </div>
+                </div>
+            </main>
+            <footer></footer>
+        </div>
+
+        <script src="vidilly.js"></script>
+        <script src="scripts/site.js"></script>
+    </body>
+</html>
