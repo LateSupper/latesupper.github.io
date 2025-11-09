@@ -65,7 +65,6 @@
     appearance: none;
     position: absolute;
     bottom: var(--vidilly-seek-y); left: 0;
-    display: block;
     width: 100%;
     height: var(--vidilly-seek-h);
     background-color: white;
