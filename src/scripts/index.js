@@ -19,6 +19,9 @@ function sitemap() {
             },
             'vidilly': {
                 desc: 'A simple, plug-and-play video UI.'
+            },
+            'EXP Table Generator': {
+                desc: 'An experience point table generator for role-playing games.'
             }
         }
         for (const property in D) {

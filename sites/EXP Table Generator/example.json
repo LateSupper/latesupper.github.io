@@ -1,0 +1,402 @@
+{
+    "1": {
+        "expRequired": 50,
+        "expTotal": 0
+    },
+    "2": {
+        "expRequired": 55,
+        "expTotal": 50
+    },
+    "3": {
+        "expRequired": 60,
+        "expTotal": 105
+    },
+    "4": {
+        "expRequired": 66,
+        "expTotal": 165
+    },
+    "5": {
+        "expRequired": 72,
+        "expTotal": 231
+    },
+    "6": {
+        "expRequired": 79,
+        "expTotal": 303
+    },
+    "7": {
+        "expRequired": 86,
+        "expTotal": 382
+    },
+    "8": {
+        "expRequired": 94,
+        "expTotal": 468
+    },
+    "9": {
+        "expRequired": 103,
+        "expTotal": 562
+    },
+    "10": {
+        "expRequired": 113,
+        "expTotal": 665
+    },
+    "11": {
+        "expRequired": 124,
+        "expTotal": 778
+    },
+    "12": {
+        "expRequired": 136,
+        "expTotal": 902
+    },
+    "13": {
+        "expRequired": 149,
+        "expTotal": 1038
+    },
+    "14": {
+        "expRequired": 163,
+        "expTotal": 1187
+    },
+    "15": {
+        "expRequired": 179,
+        "expTotal": 1350
+    },
+    "16": {
+        "expRequired": 196,
+        "expTotal": 1529
+    },
+    "17": {
+        "expRequired": 215,
+        "expTotal": 1725
+    },
+    "18": {
+        "expRequired": 236,
+        "expTotal": 1940
+    },
+    "19": {
+        "expRequired": 259,
+        "expTotal": 2176
+    },
+    "20": {
+        "expRequired": 284,
+        "expTotal": 2435
+    },
+    "21": {
+        "expRequired": 312,
+        "expTotal": 2719
+    },
+    "22": {
+        "expRequired": 343,
+        "expTotal": 3031
+    },
+    "23": {
+        "expRequired": 377,
+        "expTotal": 3374
+    },
+    "24": {
+        "expRequired": 414,
+        "expTotal": 3751
+    },
+    "25": {
+        "expRequired": 455,
+        "expTotal": 4165
+    },
+    "26": {
+        "expRequired": 500,
+        "expTotal": 4620
+    },
+    "27": {
+        "expRequired": 550,
+        "expTotal": 5120
+    },
+    "28": {
+        "expRequired": 605,
+        "expTotal": 5670
+    },
+    "29": {
+        "expRequired": 665,
+        "expTotal": 6275
+    },
+    "30": {
+        "expRequired": 731,
+        "expTotal": 6940
+    },
+    "31": {
+        "expRequired": 804,
+        "expTotal": 7671
+    },
+    "32": {
+        "expRequired": 884,
+        "expTotal": 8475
+    },
+    "33": {
+        "expRequired": 972,
+        "expTotal": 9359
+    },
+    "34": {
+        "expRequired": 1069,
+        "expTotal": 10331
+    },
+    "35": {
+        "expRequired": 1175,
+        "expTotal": 11400
+    },
+    "36": {
+        "expRequired": 1292,
+        "expTotal": 12575
+    },
+    "37": {
+        "expRequired": 1421,
+        "expTotal": 13867
+    },
+    "38": {
+        "expRequired": 1563,
+        "expTotal": 15288
+    },
+    "39": {
+        "expRequired": 1719,
+        "expTotal": 16851
+    },
+    "40": {
+        "expRequired": 1890,
+        "expTotal": 18570
+    },
+    "41": {
+        "expRequired": 2079,
+        "expTotal": 20460
+    },
+    "42": {
+        "expRequired": 2286,
+        "expTotal": 22539
+    },
+    "43": {
+        "expRequired": 2514,
+        "expTotal": 24825
+    },
+    "44": {
+        "expRequired": 2765,
+        "expTotal": 27339
+    },
+    "45": {
+        "expRequired": 3041,
+        "expTotal": 30104
+    },
+    "46": {
+        "expRequired": 3345,
+        "expTotal": 33145
+    },
+    "47": {
+        "expRequired": 3679,
+        "expTotal": 36490
+    },
+    "48": {
+        "expRequired": 4046,
+        "expTotal": 40169
+    },
+    "49": {
+        "expRequired": 4450,
+        "expTotal": 44215
+    },
+    "50": {
+        "expRequired": 4895,
+        "expTotal": 48665
+    },
+    "51": {
+        "expRequired": 5384,
+        "expTotal": 53560
+    },
+    "52": {
+        "expRequired": 5922,
+        "expTotal": 58944
+    },
+    "53": {
+        "expRequired": 6514,
+        "expTotal": 64866
+    },
+    "54": {
+        "expRequired": 7165,
+        "expTotal": 71380
+    },
+    "55": {
+        "expRequired": 7881,
+        "expTotal": 78545
+    },
+    "56": {
+        "expRequired": 8669,
+        "expTotal": 86426
+    },
+    "57": {
+        "expRequired": 9535,
+        "expTotal": 95095
+    },
+    "58": {
+        "expRequired": 10488,
+        "expTotal": 104630
+    },
+    "59": {
+        "expRequired": 11536,
+        "expTotal": 115118
+    },
+    "60": {
+        "expRequired": 12689,
+        "expTotal": 126654
+    },
+    "61": {
+        "expRequired": 13957,
+        "expTotal": 139343
+    },
+    "62": {
+        "expRequired": 15352,
+        "expTotal": 153300
+    },
+    "63": {
+        "expRequired": 16887,
+        "expTotal": 168652
+    },
+    "64": {
+        "expRequired": 18575,
+        "expTotal": 185539
+    },
+    "65": {
+        "expRequired": 20432,
+        "expTotal": 204114
+    },
+    "66": {
+        "expRequired": 22475,
+        "expTotal": 224546
+    },
+    "67": {
+        "expRequired": 24722,
+        "expTotal": 247021
+    },
+    "68": {
+        "expRequired": 27194,
+        "expTotal": 271743
+    },
+    "69": {
+        "expRequired": 29913,
+        "expTotal": 298937
+    },
+    "70": {
+        "expRequired": 32904,
+        "expTotal": 328850
+    },
+    "71": {
+        "expRequired": 36194,
+        "expTotal": 361754
+    },
+    "72": {
+        "expRequired": 39813,
+        "expTotal": 397948
+    },
+    "73": {
+        "expRequired": 43794,
+        "expTotal": 437761
+    },
+    "74": {
+        "expRequired": 48173,
+        "expTotal": 481555
+    },
+    "75": {
+        "expRequired": 52990,
+        "expTotal": 529728
+    },
+    "76": {
+        "expRequired": 58289,
+        "expTotal": 582718
+    },
+    "77": {
+        "expRequired": 64117,
+        "expTotal": 641007
+    },
+    "78": {
+        "expRequired": 70528,
+        "expTotal": 705124
+    },
+    "79": {
+        "expRequired": 77580,
+        "expTotal": 775652
+    },
+    "80": {
+        "expRequired": 85338,
+        "expTotal": 853232
+    },
+    "81": {
+        "expRequired": 93871,
+        "expTotal": 938570
+    },
+    "82": {
+        "expRequired": 103258,
+        "expTotal": 1032441
+    },
+    "83": {
+        "expRequired": 113583,
+        "expTotal": 1135699
+    },
+    "84": {
+        "expRequired": 124941,
+        "expTotal": 1249282
+    },
+    "85": {
+        "expRequired": 137435,
+        "expTotal": 1374223
+    },
+    "86": {
+        "expRequired": 151178,
+        "expTotal": 1511658
+    },
+    "87": {
+        "expRequired": 166295,
+        "expTotal": 1662836
+    },
+    "88": {
+        "expRequired": 182924,
+        "expTotal": 1829131
+    },
+    "89": {
+        "expRequired": 201216,
+        "expTotal": 2012055
+    },
+    "90": {
+        "expRequired": 221337,
+        "expTotal": 2213271
+    },
+    "91": {
+        "expRequired": 243470,
+        "expTotal": 2434608
+    },
+    "92": {
+        "expRequired": 267817,
+        "expTotal": 2678078
+    },
+    "93": {
+        "expRequired": 294598,
+        "expTotal": 2945895
+    },
+    "94": {
+        "expRequired": 324057,
+        "expTotal": 3240493
+    },
+    "95": {
+        "expRequired": 356462,
+        "expTotal": 3564550
+    },
+    "96": {
+        "expRequired": 392108,
+        "expTotal": 3921012
+    },
+    "97": {
+        "expRequired": 431318,
+        "expTotal": 4313120
+    },
+    "98": {
+        "expRequired": 474449,
+        "expTotal": 4744438
+    },
+    "99": {
+        "expRequired": 521893,
+        "expTotal": 5218887
+    },
+    "100": {
+        "expRequired": 574082,
+        "expTotal": 5740780
+    }
+}
