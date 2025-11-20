@@ -5,20 +5,17 @@ function sitemap() {
     if (sm) {
         var c = 'sitemap-link';
         const D = {
-            'portfolio': {
-                desc: 'My legacy portfolio site from 2019 containing smaller, design-focused projects.'
-            },
             'wheel': {
-                desc: 'Wheel to help make a decision.'
+                desc: 'A wheel to help make decisions.'
             },
             'crash': {
-                desc: 'Funny-money gambling game.'
+                desc: 'A pseudo currency gambling game.'
             },
             'BL4 Side Missions': {
-                desc: 'Collection of Borderlands 4 side missions as a checklist.'
+                desc: 'A checklist of Borderlands 4 side missions.'
             },
             'vidilly': {
-                desc: 'A simple, plug-and-play video UI.'
+                desc: 'A simple, plug-and-play desktop video UI.'
             },
             'EXP Table Generator': {
                 desc: 'An experience point table generator for role-playing games.'
